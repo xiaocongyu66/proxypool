@@ -46,10 +46,10 @@ func CheckSitesAll(proxies []proxy.Proxy) {
 	}
 	numWorker := SpeedConn
 	if numWorker <= 0 {
-		numWorker = 5
+		numWorker = 50
 	}
-	if numWorker > 10 {
-		numWorker = 10
+	if numWorker > 500 {
+		numWorker = 500
 	}
 	doneCount := 0
 	dcm := sync.Mutex{}
