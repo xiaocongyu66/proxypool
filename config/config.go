@@ -86,7 +86,7 @@ func Parse() error {
 
 	// set default
 	if Config.SpeedConnection <= 0 {
-		Config.SpeedConnection = 5
+		Config.SpeedConnection = 50
 	}
 	if Config.SpeedTimeout <= 0 {
 		Config.SpeedTimeout = 10
@@ -94,7 +94,7 @@ func Parse() error {
 
 	// set default
 	if Config.HealthCheckConnection <= 0 {
-		Config.HealthCheckConnection = 500
+		Config.HealthCheckConnection = 1000
 	}
 	if Config.Port == "" {
 		Config.Port = "12580"
