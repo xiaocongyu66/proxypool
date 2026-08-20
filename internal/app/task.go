@@ -87,10 +87,14 @@ func CrawlGo() {
 	log.Infoln("Stage 1: Fast connectivity health check...")
 	healthcheck.SpeedConn = C.Config.SpeedConnection
 	healthcheck.DelayConn = C.Config.HealthCheckConnection
+	if healthcheck.DelayConn < 1000 {
+		healthcheck.DelayConn = 1000
+	}
+	healthcheck.DelayTimeout = 3 * time.Second
 	if C.Config.HealthCheckTimeout > 0 {
 		healthcheck.DelayTimeout = time.Second * time.Duration(C.Config.HealthCheckTimeout)
-		log.Infoln("CONF: Health check timeout is set to %d seconds", C.Config.HealthCheckTimeout)
 	}
+	log.Infoln("CONF: Stage 1 timeout=%s, concurrency=%d", healthcheck.DelayTimeout, healthcheck.DelayConn)
 
 	proxies = healthcheck.CleanBadProxiesWithGrpool(proxies)
 	log.Infoln("Stage 1 done: usable proxy count: %d", len(proxies))
@@ -118,9 +122,14 @@ func CrawlGo() {
 	log.Infoln("Stage 2: Continuous 10s speed test...")
 	if C.Config.SpeedTest {
 		cache.IsSpeedTest = "已开启"
+		healthcheck.SpeedConn = C.Config.SpeedConnection
+		if healthcheck.SpeedConn < 50 {
+			healthcheck.SpeedConn = 50
+		}
 		if C.Config.SpeedTimeout > 0 {
 			healthcheck.SpeedTimeout = time.Second * time.Duration(C.Config.SpeedTimeout)
 		}
+		log.Infoln("CONF: Stage 2 concurrency=%d, timeout=%s", healthcheck.SpeedConn, healthcheck.SpeedTimeout)
 		proxies = healthcheck.SpeedTestContinuousAll(proxies)
 	} else {
 		cache.IsSpeedTest = "未开启"
