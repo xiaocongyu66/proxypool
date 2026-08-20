@@ -53,12 +53,10 @@ func main() {
 	exe, _ := os.Executable()
 	log.Infoln("Running image path: %s", exe)
 
-	database.InitTables()
 	// init GeoIp db reader and map between emoji's and countries
-	// return: struct geoIp (dbreader, emojimap)
 	err = geoIp.InitGeoIpDB()
 	if err != nil {
-		os.Exit(1)
+		log.Warnln("GeoIP init failed: %s", err.Error())
 	}
 
 	if onceMode {
@@ -67,6 +65,8 @@ func main() {
 		app.CrawlGo()
 		return
 	}
+
+	database.InitTables()
 
 	log.Infoln("Do the first crawl...")
 	go app.CrawlGo() // 抓取主程序
