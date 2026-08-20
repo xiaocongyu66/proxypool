@@ -39,10 +39,10 @@ func speedTestContinuous(proxies []proxy.Proxy, onlyNew bool) proxy.ProxyList {
 	}
 	numWorker := SpeedConn
 	if numWorker <= 0 {
-		numWorker = 5
+		numWorker = 50
 	}
-	if numWorker > 10 {
-		numWorker = 10 // cap concurrency to save bandwidth
+	if numWorker > 500 {
+		numWorker = 500
 	}
 	result := make(proxy.ProxyList, 0, len(proxies))
 	m := sync.Mutex{}
