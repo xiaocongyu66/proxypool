@@ -118,8 +118,29 @@ func CrawlGo() {
 		}
 	}
 
-	// === Stage 2: Continuous 10s speed test (filters unstable nodes) ===
-	log.Infoln("Stage 2: Continuous 10s speed test...")
+	// === Stage 2: IP cleanliness check (filter dirty IPs before speed test) ===
+	log.Infoln("Stage 2: IP cleanliness check (filter dirty nodes)...")
+	healthcheck.CheckIpCleanlinessAll(proxies)
+	
+	// 淘汰脏 IP 节点：datacenter+proxy flagged (IpScore < 40) 直接淘汰
+	beforeIpFilter := len(proxies)
+	ipFiltered := make(proxy.ProxyList, 0, len(proxies))
+	for _, p := range proxies {
+		ps, ok := healthcheck.ProxyStats.Find(p)
+		if !ok {
+			ipFiltered = append(ipFiltered, p) // 没查到的保留
+			continue
+		}
+		if ps.IpScore < 40 {
+			continue // 脏 IP 淘汰
+		}
+		ipFiltered = append(ipFiltered, p)
+	}
+	proxies = ipFiltered
+	log.Infoln("Stage 2 done: IP filter %d -> %d (removed %d dirty nodes)", beforeIpFilter, len(proxies), beforeIpFilter-len(proxies))
+
+	// === Stage 3: Continuous 10s speed test (filters unstable nodes) ===
+	log.Infoln("Stage 3: Continuous 10s speed test...")
 	if C.Config.SpeedTest {
 		cache.IsSpeedTest = "已开启"
 		healthcheck.SpeedConn = C.Config.SpeedConnection
@@ -129,17 +150,35 @@ func CrawlGo() {
 		if C.Config.SpeedTimeout > 0 {
 			healthcheck.SpeedTimeout = time.Second * time.Duration(C.Config.SpeedTimeout)
 		}
-		log.Infoln("CONF: Stage 2 concurrency=%d, timeout=%s", healthcheck.SpeedConn, healthcheck.SpeedTimeout)
+		log.Infoln("CONF: Stage 3 concurrency=%d, timeout=%s", healthcheck.SpeedConn, healthcheck.SpeedTimeout)
 		proxies = healthcheck.SpeedTestContinuousAll(proxies)
 	} else {
 		cache.IsSpeedTest = "未开启"
 	}
 
-	// === Stage 3: Quality assessment (IP cleanliness + site access + scoring) ===
-	log.Infoln("Stage 3: Quality assessment (IP + sites + scoring)...")
-	healthcheck.CheckIpCleanlinessAll(proxies)
+	// === Stage 4: Site accessibility + quality scoring ===
+	log.Infoln("Stage 4: Site accessibility + quality scoring...")
 	healthcheck.CheckSitesAll(proxies)
 	healthcheck.ScoreAllProxies(proxies)
+
+	// === Final filter: remove low-quality / useless nodes ===
+	beforeFilter := len(proxies)
+	filtered := make(proxy.ProxyList, 0, len(proxies))
+	for _, p := range proxies {
+		ps, ok := healthcheck.ProxyStats.Find(p)
+		if !ok {
+			continue
+		}
+		if ps.Quality < 30 {
+			continue
+		}
+		if ps.Speed == 0 && len(ps.Sites) == 0 {
+			continue
+		}
+		filtered = append(filtered, p)
+	}
+	proxies = filtered
+	log.Infoln("Final filter: %d -> %d (removed %d useless nodes)", beforeFilter, len(proxies), beforeFilter-len(proxies))
 
 	// Apply final names: Country + Speed + Sites + Score
 	for i := range proxies {
