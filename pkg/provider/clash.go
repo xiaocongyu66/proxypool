@@ -63,6 +63,14 @@ func checkClashSupport(p proxy.Proxy) bool {
 		}
 	case "trojan":
 		return true
+	case "http":
+		return true
+	case "socks5":
+		return true
+	case "vless":
+		return true
+	case "hysteria2":
+		return true
 	default:
 		return false
 	}

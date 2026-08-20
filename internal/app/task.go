@@ -73,10 +73,18 @@ func CrawlGo() {
 	log.Infoln("VmessProxiesCount: %d", cache.VmessProxiesCount)
 	cache.TrojanProxiesCount = proxies.TypeLen("trojan")
 	log.Infoln("TrojanProxiesCount: %d", cache.TrojanProxiesCount)
+	cache.VlessProxiesCount = proxies.TypeLen("vless")
+	log.Infoln("VlessProxiesCount: %d", cache.VlessProxiesCount)
+	cache.Hy2ProxiesCount = proxies.TypeLen("hysteria2")
+	log.Infoln("Hy2ProxiesCount: %d", cache.Hy2ProxiesCount)
+	cache.HttpProxiesCount = proxies.TypeLen("http")
+	log.Infoln("HttpProxiesCount: %d", cache.HttpProxiesCount)
+	cache.SocksProxiesCount = proxies.TypeLen("socks5")
+	log.Infoln("SocksProxiesCount: %d", cache.SocksProxiesCount)
 	cache.LastCrawlTime = time.Now().In(location).Format("2006-01-02 15:04:05")
 
-	// Health Check
-	log.Infoln("Now proceed proxy health check...")
+	// === Stage 1: Fast connectivity test (delay check) ===
+	log.Infoln("Stage 1: Fast connectivity health check...")
 	healthcheck.SpeedConn = C.Config.SpeedConnection
 	healthcheck.DelayConn = C.Config.HealthCheckConnection
 	if C.Config.HealthCheckTimeout > 0 {
@@ -85,10 +93,7 @@ func CrawlGo() {
 	}
 
 	proxies = healthcheck.CleanBadProxiesWithGrpool(proxies)
-
-	// proxies = healthcheck.CleanBadProxies(proxies)
-
-	log.Infoln("CrawlGo clash usable proxy count: %d", len(proxies))
+	log.Infoln("Stage 1 done: usable proxy count: %d", len(proxies))
 
 	// Format name like US_01 sorted by country
 	proxies.NameAddCounrty().Sort()
@@ -109,6 +114,28 @@ func CrawlGo() {
 		}
 	}
 
+	// === Stage 2: Continuous 10s speed test (filters unstable nodes) ===
+	log.Infoln("Stage 2: Continuous 10s speed test...")
+	if C.Config.SpeedTest {
+		cache.IsSpeedTest = "已开启"
+		if C.Config.SpeedTimeout > 0 {
+			healthcheck.SpeedTimeout = time.Second * time.Duration(C.Config.SpeedTimeout)
+		}
+		proxies = healthcheck.SpeedTestContinuousAll(proxies)
+	} else {
+		cache.IsSpeedTest = "未开启"
+	}
+
+	// === Stage 3: Quality assessment (IP cleanliness + site access + scoring) ===
+	log.Infoln("Stage 3: Quality assessment (IP + sites + scoring)...")
+	healthcheck.CheckIpCleanlinessAll(proxies)
+	healthcheck.CheckSitesAll(proxies)
+	healthcheck.ScoreAllProxies(proxies)
+
+	// Apply final names: Country + Speed + Sites + Score
+	for i := range proxies {
+		proxies[i].SetName(healthcheck.FormatProxyName(proxies[i], 60))
+	}
 	proxies.NameAddIndex()
 
 	// 可用节点存储
@@ -131,6 +158,9 @@ func CrawlGo() {
 			Proxies: &proxies,
 		},
 	}.Provide())
+
+	// Export subscription files to disk (clash.yml, v2ray.txt, singbox.json, etc.)
+	ExportFiles()
 }
 
 // Speed test for new proxies

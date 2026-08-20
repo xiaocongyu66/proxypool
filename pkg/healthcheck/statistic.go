@@ -15,6 +15,11 @@ type Stat struct {
 	Pool     bool
 	OutIp    string
 	Id       string
+	Stable   bool
+	Quality  int      // 0-100 comprehensive score
+	Sites    []string // accessible site shortcodes
+	IpScore  int      // 0-100 IP cleanliness score
+	IpType   string   // datacenter/residential/mobile/unknown
 }
 
 // Statistic array for proxies

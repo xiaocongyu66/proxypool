@@ -91,6 +91,14 @@ func ParseProxyFromLink(link string) (p Proxy, err error) {
 		p, err = ParseSSLink(link)
 	} else if strings.HasPrefix(link, "trojan://") {
 		p, err = ParseTrojanLink(link)
+	} else if strings.HasPrefix(link, "http://") || strings.HasPrefix(link, "https://") {
+		p, err = ParseHttpLink(link)
+	} else if strings.HasPrefix(link, "socks5://") || strings.HasPrefix(link, "socks4://") || strings.HasPrefix(link, "socks4a://") || strings.HasPrefix(link, "socks5h://") {
+		p, err = ParseSocksLink(link)
+	} else if strings.HasPrefix(link, "vless://") {
+		p, err = ParseVlessLink(link)
+	} else if strings.HasPrefix(link, "hy2://") || strings.HasPrefix(link, "hysteria2://") {
+		p, err = ParseHysteria2Link(link)
 	}
 	if err != nil || p == nil {
 		return nil, errors.New("link parse failed")
@@ -137,6 +145,34 @@ func ParseProxyFromClashProxy(p map[string]interface{}) (proxy Proxy, err error)
 		return &proxy, nil
 	case "trojan":
 		var proxy Trojan
+		err := json.Unmarshal(pjson, &proxy)
+		if err != nil {
+			return nil, err
+		}
+		return &proxy, nil
+	case "http":
+		var proxy Http
+		err := json.Unmarshal(pjson, &proxy)
+		if err != nil {
+			return nil, err
+		}
+		return &proxy, nil
+	case "socks5":
+		var proxy Socks5
+		err := json.Unmarshal(pjson, &proxy)
+		if err != nil {
+			return nil, err
+		}
+		return &proxy, nil
+	case "vless":
+		var proxy Vless
+		err := json.Unmarshal(pjson, &proxy)
+		if err != nil {
+			return nil, err
+		}
+		return &proxy, nil
+	case "hysteria2":
+		var proxy Hysteria2
 		err := json.Unmarshal(pjson, &proxy)
 		if err != nil {
 			return nil, err

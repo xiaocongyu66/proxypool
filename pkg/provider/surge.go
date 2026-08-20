@@ -37,6 +37,14 @@ func checkSurgeSupport(p proxy.Proxy) bool {
 		if tool.CheckInList(proxy.SSCipherList, ss.Cipher) {
 			return true
 		}
+	case *proxy.Trojan:
+		return true
+	case *proxy.Http:
+		return true
+	case *proxy.Socks5:
+		return true
+	case *proxy.Vless:
+		return true
 	default:
 		return false
 	}
