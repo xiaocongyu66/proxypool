@@ -16,10 +16,10 @@ func CheckIpCleanlinessAll(proxies []proxy.Proxy) {
 	}
 	numWorker := SpeedConn
 	if numWorker <= 0 {
-		numWorker = 5
+		numWorker = 50
 	}
-	if numWorker > 10 {
-		numWorker = 10
+	if numWorker > 200 {
+		numWorker = 200 // ip-api.com 限 45/min, 不宜太高
 	}
 	doneCount := 0
 	dcm := sync.Mutex{}
