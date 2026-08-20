@@ -31,6 +31,8 @@ jobs:
         run: |
           chmod +x bin/proxypool
           ls -lh bin/proxypool
+          # Copy assets to bin/ so binary can find them
+          cp -r assets bin/assets 2>/dev/null || true
 
       - name: Run crawl and speed test (single cycle)
         env:
