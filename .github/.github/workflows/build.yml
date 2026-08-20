@@ -1,0 +1,62 @@
+name: Build Binary
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - '**/*.go'
+      - 'go.mod'
+      - 'go.sum'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build and Upload Binary
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.20'
+
+      - name: Cache go module
+        uses: actions/cache@v4
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: Get dependencies
+        run: go get
+
+      - name: Build binary (linux amd64)
+        run: |
+          mkdir -p bin
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags '-w -s' -o bin/proxypool .
+
+      - name: Verify binary
+        run: |
+          ls -lh bin/proxypool
+          file bin/proxypool
+          ./bin/proxypool -h 2>&1 || true
+
+      - name: Commit binary to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bin/proxypool
+          if git diff --staged --quiet; then
+            echo "No binary changes"
+          else
+            git commit -m "chore: rebuild binary $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push origin HEAD:${{ github.ref_name }}
+          fi

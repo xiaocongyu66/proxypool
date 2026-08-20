@@ -1,0 +1,81 @@
+# 模糊抓取订阅链接
+- type: webfuzzsub
+  options:
+    url: https://raw.githubusercontent.com/du5/free/master/sub.list
+
+# 订阅链接
+- type: subscribe
+  options:
+    url: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+
+# 网页模糊抓取
+- type: webfuzz
+  options:
+    url: https://merlinblog.xyz/wiki/freess.html
+
+# tg频道抓取
+- type: tgchannel
+  options:
+    channel: ssrList
+    num: 200
+
+# tg频道抓取 - AbyssVPN
+- type: tgchannel
+  options:
+    channel: AbyssVPN
+    num: 200
+
+# 翻墙党论坛抓取
+- type: web-fanqiangdang
+  options:
+    url: https://fanqiangdang.com/forum-48-1.html
+
+# clash格式订阅链接
+- type: clash
+  options:
+    url: https://raw.githubusercontent.com/du5/free/master/file/0909/Clash.yaml
+
+# 某个网站抓取
+- type: web-freessrxyz
+  options:
+    url: https://free-ss.site/
+
+# === 新增抓取源 ===
+
+# proxifly GitHub 仓库 - HTTP/SOCKS5 代理列表（含一周更新检查，过期自动跳过）
+- type: github-proxylist
+  options:
+    url: https://cdn.jsdelivr.net/gh/proxifly/free-proxy-list@main/proxies/all/data.txt
+    repo: proxifly/free-proxy-list
+    max-age-days: 7
+    default-protocol: socks5
+
+# PuddinCat/BestClash - clash yaml 格式节点
+- type: clash
+  options:
+    url: https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxies.yaml
+
+# free18/v2ray - clash yaml 格式节点
+- type: clash
+  options:
+    url: https://raw.githubusercontent.com/free18/v2ray/main/c.yaml
+
+# free18/v2ray - base64 订阅格式节点
+- type: subscribe
+  options:
+    url: https://raw.githubusercontent.com/free18/v2ray/main/v.txt
+
+# awesome-vpn/awesome-vpn - clash yaml 格式节点（含 hy2/vless/trojan 等）
+- type: clash
+  options:
+    url: https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml
+
+# awesome-vpn/awesome-vpn - base64 订阅格式（含 hy2/vless/trojan 等）
+- type: subscribe
+  options:
+    url: https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/all
+
+# awesome-vpn/awesome-vpn - sing-box json 格式节点（作为 webfuzzsub 解析）
+- type: webfuzzsub
+  options:
+    url: https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/sing-box.json

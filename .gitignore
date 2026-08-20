@@ -1,0 +1,33 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+tmp/
+.vscode/
+proxypool
+__debug_bin
+
+# Keep bin/proxypool binary in repo for CI reuse
+# bin/*
+
+# Test binary, build with `go test -c`
+*.test
+# Manually add it if neccessary
+*_test.*
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# dep
+vendor
+
+# GoLand
+.idea/*
+
+# macOS file
+.DS_Store
+
+# Output directory (generated, but committed for distribution)
+# output/

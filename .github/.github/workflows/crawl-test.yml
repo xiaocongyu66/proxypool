@@ -1,0 +1,69 @@
+name: Crawl and Speed Test
+
+on:
+  schedule:
+    # 每 12 小时运行一次 (UTC 00:00 和 12:00)
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    name: Crawl and Test Proxies
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Download GeoIP database
+        run: |
+          mkdir -p assets
+          wget -q -O assets/GeoLite2-City.mmdb "https://github.com/P3TERX/GeoLite.mmdb/releases/latest/download/GeoLite2-City.mmdb" || \
+            echo "GeoIP download failed"
+          wget -q -O assets/flags.json "https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json" || \
+            echo '[]' > assets/flags.json
+
+      - name: Prepare binary
+        run: |
+          chmod +x bin/proxypool
+          ls -lh bin/proxypool
+
+      - name: Run crawl and speed test (single cycle)
+        env:
+          DOMAIN: localhost
+          PORT: 12580
+        run: |
+          ./bin/proxypool -c ./config/config.yaml -once
+
+      - name: Verify output files
+        run: |
+          echo "=== Output files ==="
+          ls -lh output/ 2>/dev/null || echo "No output directory"
+          echo "=== Node count ==="
+          wc -l output/nodes.txt 2>/dev/null || echo "No nodes.txt"
+          echo "=== High quality count ==="
+          wc -l output/high_quality.txt 2>/dev/null || echo "No high_quality.txt"
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update proxy nodes $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git pull --rebase --autostash origin main 2>/dev/null || true
+            git push origin main
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxy-output
+          path: output/
+          retention-days: 7
