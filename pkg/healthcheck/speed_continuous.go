@@ -19,7 +19,7 @@ import (
 // 持续测速下载测试 URL（使用 Cloudflare 的 speed test 端点，全球可达、稳定、低延迟）
 const speedTestDownloadURL = "https://speed.cloudflare.com/__down?bytes="
 const speedTestDuration = 10 * time.Second
-const speedTestMaxBytes = 25 * 1024 * 1024 // 25MB cap to limit bandwidth
+const speedTestMaxBytes = 5 * 1024 * 1024 // 5MB cap to limit bandwidth
 
 // SpeedTestContinuousAll runs a 10-second continuous download test for all proxies.
 // Results (Mbps) are stored in ProxyStats. Unstable proxies are filtered out.
@@ -137,9 +137,18 @@ func continuousDownloadTest(p proxy.Proxy) (speedMbps float64, stable bool) {
 		return 0, false
 	}
 	transport := &http.Transport{
-		Dial: func(string, string) (net.Conn, error) {
-			return clashProxy.DialContext(ctx, &addr)
+		DialContext: func(ctx context.Context, network, addrStr string) (net.Conn, error) {
+			dialAddr, e := urlToMetadata(testURL)
+			if e != nil {
+				return nil, e
+			}
+			return clashProxy.DialContext(ctx, &dialAddr)
 		},
+		MaxIdleConns:          1,
+		IdleConnTimeout:       10 * time.Second,
+		TLSHandshakeTimeout:   5 * time.Second,
+		ExpectContinueTimeout: 1 * time.Second,
+		ResponseHeaderTimeout: 5 * time.Second,
 	}
 	client := &http.Client{Transport: transport, Timeout: speedTestDuration + 2*time.Second}
 	resp, err := client.Do(req)
@@ -215,7 +224,7 @@ func continuousDownloadTest(p proxy.Proxy) (speedMbps float64, stable bool) {
 	return speedMbps, stable
 }
 
-// simplePool is a lightweight goroutine pool to avoid grpool overhead
+// simplePool is a lightweight concurrent worker pool.
 type simplePool struct {
 	wg      sync.WaitGroup
 	workers chan func()
@@ -223,32 +232,35 @@ type simplePool struct {
 
 func newSimplePool(n int) *simplePool {
 	p := &simplePool{
-		workers: make(chan func(), 100),
+		workers: make(chan func(), 5000),
 	}
-	p.wg.Add(n)
 	for i := 0; i < n; i++ {
-		go func() {
-			defer p.wg.Done()
-			for job := range p.workers {
-				job()
-			}
-		}()
+		go p.worker()
 	}
 	return p
 }
 
+func (p *simplePool) worker() {
+	for job := range p.workers {
+		job()
+		p.wg.Done()
+	}
+}
+
+// submit queues a job. The caller must have called waitCount first.
 func (p *simplePool) submit(f func()) {
 	p.wg.Add(1)
-	p.workers <- func() {
-		defer p.wg.Done()
-		f()
-	}
+	p.workers <- f
 }
 
 func (p *simplePool) jobDone() {}
 
-func (p *simplePool) waitCount(n int) {}
+// waitCount records how many jobs will be submitted.
+func (p *simplePool) waitCount(n int) {
+	// wg will be incremented by submit calls; no pre-add needed.
+}
 
+// waitAll closes the queue and waits for all workers to finish.
 func (p *simplePool) waitAll() {
 	close(p.workers)
 	p.wg.Wait()
