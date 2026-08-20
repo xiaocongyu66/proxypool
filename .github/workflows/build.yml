@@ -21,19 +21,13 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.20'
-
-      - name: Cache go module
-        uses: actions/cache@v4
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
 
       - name: Get dependencies
         run: go get
@@ -46,7 +40,6 @@ jobs:
       - name: Verify binary
         run: |
           ls -lh bin/proxypool
-          file bin/proxypool
           ./bin/proxypool -h 2>&1 || true
 
       - name: Commit binary to repo
@@ -58,5 +51,6 @@ jobs:
             echo "No binary changes"
           else
             git commit -m "chore: rebuild binary $(date -u '+%Y-%m-%d %H:%M') UTC"
-            git push origin HEAD:main
+            git pull --rebase --autostash origin main || true
+            git push origin main
           fi
