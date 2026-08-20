@@ -23,11 +23,8 @@ func InitGeoIpDB() error {
 	// 判断文件是否存在
 	_, err := os.Stat(geodb)
 	if err != nil && os.IsNotExist(err) {
-		if err != nil {
-			log.Println("文件不存在, 请自行下载 Geoip2 City 库, 并保存在", geodb)
-			panic(err)
-		}
-		GeoIpDB = NewGeoIP(geodb, flags)
+		log.Println("GeoIP database not found at", geodb, "- geo features disabled")
+		return err
 	}
 	GeoIpDB = NewGeoIP(geodb, flags)
 	return nil
@@ -46,10 +43,10 @@ type CountryEmoji struct {
 
 // new geoip from db file
 func NewGeoIP(geodb, flags string) (geoip GeoIP) {
-	// 运行到这里时geodb只能为存在
 	db, err := geoip2.Open(geodb)
 	if err != nil {
-		log.Fatal(err)
+		log.Println("failed to open GeoIP database:", err)
+		return
 	}
 	geoip.db = db
 
@@ -81,6 +78,9 @@ func NewGeoIP(geodb, flags string) (geoip GeoIP) {
 
 // find ip info
 func (g GeoIP) Find(ipORdomain string) (ip, country string, err error) {
+	if g.db == nil {
+		return "", "🏁ZZ", nil
+	}
 	ips, err := net.LookupIP(ipORdomain)
 	if err != nil {
 		return "", "", err
