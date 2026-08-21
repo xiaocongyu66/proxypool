@@ -116,9 +116,9 @@ func CrawlGo() {
 		}
 	}
 
-	// === Stage 2: IP cleanliness check (filter dirty IPs before speed test) ===
-	log.Infoln("Stage 2: IP cleanliness check (filter dirty nodes)...")
-	healthcheck.CheckIpCleanlinessAll(proxies)
+	// === Stage 2: IP cleanliness check (batch API, like sub2api) ===
+	log.Infoln("Stage 2: IP cleanliness check (batch, no proxy connection)...")
+	healthcheck.CheckIpCleanlinessBatch(proxies)
 	
 	// 淘汰脏 IP 节点：datacenter+proxy flagged (IpScore < 40) 直接淘汰
 	beforeIpFilter := len(proxies)
