@@ -82,7 +82,6 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 
 	// Build full clash config with rules + proxy-groups
 	var sb strings.Builder
-	sb.WriteString(hiddenComment + "\n")
 	sb.WriteString(clashFullConfigHeader)
 	sb.WriteString("\n\n")
 	sb.WriteString(proxiesStr)
@@ -92,12 +91,13 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 	sb.WriteString(clashRuleProviders)
 	sb.WriteString("\n\n")
 	sb.WriteString(clashRules)
+	sb.WriteString("\n")
+	sb.WriteString(hiddenComment)
 	return sb.String()
 }
 
 func generateV2rayBase64(proxies proxy.ProxyList) string {
 	var sb strings.Builder
-	sb.WriteString(hiddenComment + "\n")
 	for _, p := range proxies {
 		link := p.Link()
 		if link != "" {
@@ -142,13 +142,13 @@ func generateSingboxJson(proxies proxy.ProxyList) string {
 
 func generateRawLinks(proxies proxy.ProxyList) string {
 	var sb strings.Builder
-	sb.WriteString(hiddenComment + "\n")
 	for _, p := range proxies {
 		link := p.Link()
 		if link != "" {
 			sb.WriteString(link + "\n")
 		}
 	}
+	sb.WriteString(hiddenComment)
 	return sb.String()
 }
 
