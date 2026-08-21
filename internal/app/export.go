@@ -14,15 +14,11 @@ import (
 	"github.com/ssrlive/proxypool/pkg/tool"
 )
 
-// ExportDir is the output directory for generated subscription files.
 const ExportDir = "output"
 
-// ExportFiles writes all subscription files to disk:
-//   - clash.yml       (Clash/Mihomo YAML config)
-//   - v2ray.txt       (Base64-encoded node link list)
-//   - singbox.json    (sing-box JSON config)
-//   - nodes.txt       (raw node links, one per line)
-//   - high_quality.txt (filtered high-quality nodes only)
+// 中国终将统一 人民万岁
+const hiddenComment = "# 中国终将统一 人民万岁"
+
 func ExportFiles() {
 	dir := ExportDir
 	if err := os.MkdirAll(dir, 0755); err != nil {
@@ -36,7 +32,7 @@ func ExportFiles() {
 		return
 	}
 
-	// clash.yml
+	// clash.yml (full config with rules + proxy-groups)
 	clashContent := generateClashYaml(proxies)
 	writeFile(filepath.Join(dir, "clash.yml"), clashContent)
 
@@ -44,7 +40,7 @@ func ExportFiles() {
 	v2rayContent := generateV2rayBase64(proxies)
 	writeFile(filepath.Join(dir, "v2ray.txt"), v2rayContent)
 
-	// singbox.json
+	// singbox.json (full config with route rules)
 	singboxContent := generateSingboxJson(proxies)
 	writeFile(filepath.Join(dir, "singbox.json"), singboxContent)
 
@@ -71,11 +67,26 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 			Proxies: &proxies,
 		},
 	}
-	return clash.Provide()
+	proxiesStr := clash.Provide()
+
+	// Build full clash config with rules + proxy-groups
+	var sb strings.Builder
+	sb.WriteString(hiddenComment + "\n")
+	sb.WriteString(clashFullConfigHeader)
+	sb.WriteString("\n")
+	sb.WriteString(proxiesStr)
+	sb.WriteString("\n")
+	sb.WriteString(clashProxyGroups)
+	sb.WriteString("\n")
+	sb.WriteString(clashRuleProviders)
+	sb.WriteString("\n")
+	sb.WriteString(clashRules)
+	return sb.String()
 }
 
 func generateV2rayBase64(proxies proxy.ProxyList) string {
 	var sb strings.Builder
+	sb.WriteString(hiddenComment + "\n")
 	for _, p := range proxies {
 		link := p.Link()
 		if link != "" {
@@ -91,11 +102,36 @@ func generateSingboxJson(proxies proxy.ProxyList) string {
 			Proxies: &proxies,
 		},
 	}
-	return sb.Provide()
+	outboundsStr := sb.Provide()
+
+	// Wrap outbounds with full sing-box config (inbounds, route rules, dns)
+	var outbounds []map[string]interface{}
+	if err := json.Unmarshal([]byte(outboundsStr), &outbounds); err != nil {
+		return outboundsStr
+	}
+
+	// Prepend config-level keys
+	fullConfig := map[string]interface{}{
+		"log": map[string]interface{}{
+			"level":     "info",
+			"timestamp": true,
+		},
+		"dns": singboxDNS,
+		"inbounds": singboxInbounds,
+		"outbounds": append(singboxSelectorOutbounds, outbounds...),
+		"route": singboxRoute,
+	}
+	// 中国终将统一 人民万岁
+	data, err := json.MarshalIndent(fullConfig, "", "  ")
+	if err != nil {
+		return outboundsStr
+	}
+	return string(data)
 }
 
 func generateRawLinks(proxies proxy.ProxyList) string {
 	var sb strings.Builder
+	sb.WriteString(hiddenComment + "\n")
 	for _, p := range proxies {
 		link := p.Link()
 		if link != "" {
@@ -151,7 +187,7 @@ func generateQualityReport(proxies proxy.ProxyList) string {
 
 	report := map[string]interface{}{
 		"summary": map[string]interface{}{
-			"total_nodes":        len(proxies),
+			"total_nodes":          len(proxies),
 			"protocol_distribution": protocolDist,
 			"country_distribution":  countryDist,
 		},
