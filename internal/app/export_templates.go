@@ -5,7 +5,7 @@ package app
 const clashFullConfigHeader = `mixed-port: 7890
 socks-port: 7891
 allow-lan: true
-bind-address: "*"
+bind-address: '*'
 ipv6: false
 mode: rule
 log-level: info
