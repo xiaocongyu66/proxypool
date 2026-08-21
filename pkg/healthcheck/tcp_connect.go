@@ -42,11 +42,20 @@ func TCPConnectTestAll(proxies []proxy.Proxy) proxy.ProxyList {
 			if host == "" || port == "0" {
 				return
 			}
-			conn, err := net.DialTimeout("tcp", net.JoinHostPort(host, port), timeout)
-			if err != nil {
-				return
+			// hysteria2 uses UDP (QUIC), test with UDP
+			if pp.TypeName() == "hysteria2" {
+				conn, err := net.DialTimeout("udp", net.JoinHostPort(host, port), timeout)
+				if err != nil {
+					return
+				}
+				conn.Close()
+			} else {
+				conn, err := net.DialTimeout("tcp", net.JoinHostPort(host, port), timeout)
+				if err != nil {
+					return
+				}
+				conn.Close()
 			}
-			conn.Close()
 
 			// TCP reachable — record a basic delay stat
 			m.Lock()
