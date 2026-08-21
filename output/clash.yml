@@ -1,63 +1,240 @@
+# 中国终将统一 人民万岁
+mixed-port: 7890
+socks-port: 7891
+allow-lan: true
+bind-address: "*"
+ipv6: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://8.8.8.8:853
+    - https://cloudflare-dns.com/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
 proxies:
-- {"name":"ZZ grok claude gpt tw yt nf fb tg S46_01","server":"15.235.75.71","type":"ss","port":8388,"password":"FD3rCuOsxOay","cipher":"chacha20-ietf-poly1305"}
-- {"name":"ZZ claude grok gpt fb tw nf yt tg S46_02","server":"209.38.142.23","type":"ss","port":80,"password":"qfJZnq91w6aX8K1Y","cipher":"aes-256-gcm"}
-- {"name":"ZZ gpt claude nf grok yt fb tw tg S46_03","server":"51.77.225.200","type":"ss","port":8388,"password":"zRZNBszYyWo5","cipher":"chacha20-ietf-poly1305"}
-- {"name":"ZZ claude gpt grok nf yt S40_04","server":"45.8.158.176","type":"ss","port":10801,"password":"1eadd4e4a37b6601","cipher":"aes-256-gcm"}
-- {"name":"ZZ gpt claude grok nf tg yt fb tw S46_05","server":"51.195.126.38","type":"ss","port":8388,"password":"2YdE4lFOid5a","cipher":"chacha20-ietf-poly1305"}
-- {"name":"ZZ tg claude gpt nf fb grok tw yt S46_06","server":"64.188.77.159","type":"ss","port":8390,"password":"EyGy11BMfeP-6UHjsgajWw","cipher":"chacha20-ietf-poly1305"}
-- {"name":"ZZ grok gpt yt claude nf tg fb tw S46_07","server":"51.255.13.232","type":"ss","port":8388,"password":"BqnqToih0PbU","cipher":"chacha20-ietf-poly1305"}
-- {"name":"ZZ claude grok gpt fb tw nf yt tg S46_08","server":"rush-w1niu.teeopp.online","type":"vmess","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","network":"ws","servername":"rush-w1niu.teeopp.online","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/video/v4sx3q/zxzrurkc.m3u8","headers":{"Host":"rush-w1niu.teeopp.online"}}}
-- {"name":"ZZ claude grok gpt nf fb tg yt tw S46_09","server":"172.67.161.144","type":"vmess","port":8443,"uuid":"60441548-b68e-43b2-8191-e3b884be4b3c","alterId":0,"cipher":"auto","network":"ws","servername":"v2ray1.dozapp.xyz","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/lMnsZUN4/","headers":{"Host":"v2ray1.dozapp.xyz"}}}
-- {"name":"ZZ claude tw fb gpt grok yt nf tg S46_10","server":"150.109.240.179","type":"vmess","port":8443,"uuid":"f9dcb303-3e73-40eb-9327-1ac88f9a2b72","alterId":0,"cipher":"auto","network":"ws","servername":"www.bing.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/wsproxy"}}
-- {"name":"ZZ claude gpt fb tw grok nf tg S44_11","server":"tokyo02.zgjok.com","type":"vmess","port":443,"uuid":"3fe113f9-e564-4111-b8c7-11f597687689","alterId":0,"cipher":"auto","network":"ws","servername":"tokyo02.zgjok.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/"}}
-- {"name":"ZZ claude grok tg nf yt tw fb gpt S46_12","server":"cf.levikogjgfdd.ir","type":"vmess","port":2053,"uuid":"9a1a05d9-69be-45d3-e326-c6621edf7b31","alterId":0,"cipher":"auto","network":"ws","servername":"deapp.jisuyun.top","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/devm","headers":{"Host":"deapp.jisuyun.top"}}}
-- {"name":"ZZ claude gpt tg grok yt nf fb tw S46_13","server":"deapp.jisuyun.top","type":"vmess","port":2053,"uuid":"9a1a05d9-69be-45d3-e326-c6621edf7b31","alterId":0,"cipher":"auto","network":"ws","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/devm"}}
-- {"name":"ZZ grok gpt claude tw fb yt nf tg S46_14","server":"rush-6it6b.teeopp.quest","type":"vmess","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","network":"ws","servername":"rush-6it6b.teeopp.quest","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/video/kz49hf/gbin5jve.m3u8","headers":{"Host":"rush-6it6b.teeopp.quest"}}}
-- {"name":"ZZ claude gpt grok fb tw nf tg yt S46_15","server":"216.128.176.166","type":"vmess","port":28809,"uuid":"ebca559c-a4a1-4062-9453-6412d8ff5255","alterId":0,"cipher":"auto","network":"ws","http-opts":{},"h2-opts":{},"ws-opts":{"path":"/ebca559c-a4a1-4062-9453-6412d8ff5255","headers":{"Host":"216.128.176.166"}}}
-- {"name":"ZZ gpt grok tw yt fb claude tg nf S46_16","server":"node.socks5.kdns.fr","type":"vmess","port":443,"uuid":"37db053e-cb62-45bc-8a09-d2a9c2ebbd09","alterId":0,"cipher":"auto","network":"ws","servername":"booth-moreover-framework-thereafter.trycloudflare.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/37db053e-cb62-45bc-8a09-d2a9c2ebbd09-vm","headers":{"Host":"booth-moreover-framework-thereafter.trycloudflare.com"}}}
-- {"name":"ZZ grok gpt claude tw yt fb nf tg S46_17","server":"ethical-raccoon.rooster465.autos","type":"trojan","port":443,"password":"PQ05174892"}
-- {"name":"ZZ grok gpt claude fb tw yt tg nf S46_18","server":"57.180.13.78","type":"trojan","port":443,"password":"ND91608427","sni":"healthy-louse.rooster465.autos"}
-- {"name":"ZZ gpt claude grok tg nf tw yt fb S46_19","server":"kind-stork.rooster465.autos","type":"trojan","port":443,"password":"AE62539071","sni":"kind-stork.rooster465.autos"}
-- {"name":"ZZ grok claude gpt fb tw yt nf tg S46_20","server":"pet-albacore.rooster465.autos","type":"trojan","port":443,"password":"HC04361579","sni":"pet-albacore.rooster465.autos"}
-- {"name":"ZZ gpt claude fb grok tw nf yt tg S58_21","server":"128.14.181.220","type":"trojan","port":5555,"password":"fg20mtCFHy","sni":"www.bing.com","skip-cert-verify":true}
-- {"name":"ZZ gpt claude yt grok fb tw nf tg S46_22","server":"natural-swan.rooster465.autos","type":"trojan","port":443,"password":"FH72359861"}
-- {"name":"🏁ZZ grok tg claude nf tw fb yt S44_23","server":"15.237.216.173","type":"ss","country":"🏁ZZ","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
-- {"name":"🏁ZZ gpt grok claude tw fb yt tg nf S46_24","server":"definite-gazelle.rooster465.autos","type":"trojan","country":"🏁ZZ","port":443,"password":"EQ30679154","sni":"definite-gazelle.rooster465.autos","skip-cert-verify":true,"udp":true}
-- {"name":"🏁ZZ claude gpt tg nf grok tw yt fb S58_25","server":"tr-switzerlandgopota.unlimited-access.ru","type":"trojan","country":"🏁ZZ","port":443,"password":"kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi","sni":"tr-switzerlandgopota.unlimited-access.ru","skip-cert-verify":true,"udp":true}
-- {"name":"🏁ZZ claude gpt nf fb grok tw yt tg S58_26","server":"128.14.148.84","type":"trojan","country":"🏁ZZ","port":5531,"password":"fg20mtCFHy","sni":"ycgsc.southbyte.xyz","skip-cert-verify":true,"udp":true}
-- {"name":"🏁ZZ gpt claude grok yt fb tw nf tg S46_27","server":"47.86.107.20","type":"trojan","country":"🏁ZZ","port":5443,"password":"fg20mtCFHy","sni":"hytfes.southbyte.xyz","skip-cert-verify":true,"udp":true}
-- {"name":"🏁ZZ gpt yt fb tw claude grok tg nf S46_28","server":"80.241.214.192","type":"http","country":"🏁ZZ","port":3128,"skip-cert-verify":true}
-- {"name":"🏁ZZ gpt claude grok nf fb yt S42_29","server":"195.133.53.59","type":"http","country":"🏁ZZ","port":10809,"skip-cert-verify":true}
-- {"name":"🏁ZZ gpt grok claude fb nf yt tw tg S46_30","server":"130.110.103.245","type":"http","country":"🏁ZZ","port":3128,"skip-cert-verify":true}
-- {"name":"🏁ZZ tg S32_31","server":"43.205.125.76","type":"http","country":"🏁ZZ","port":27320,"skip-cert-verify":true}
-- {"name":"🏁ZZ claude grok yt fb tw tg S42_32","server":"181.215.18.40","type":"http","country":"🏁ZZ","port":8181,"skip-cert-verify":true}
-- {"name":"🏁ZZ tw yt grok gpt tg nf fb claude S46_33","server":"95.40.233.164","type":"http","country":"🏁ZZ","port":3128,"skip-cert-verify":true}
-- {"name":"🏁ZZ fb S32_34","server":"51.16.42.227","type":"http","country":"🏁ZZ","port":48482,"skip-cert-verify":true}
-- {"name":"🏁ZZ grok tg S34_35","server":"34.207.102.197","type":"http","country":"🏁ZZ","port":38640,"skip-cert-verify":true}
-- {"name":"🏁ZZ grok S32_36","server":"35.180.75.159","type":"http","country":"🏁ZZ","port":8157,"skip-cert-verify":true}
-- {"name":"🏁ZZ claude gpt grok tw fb nf yt tg S46_37","server":"98.83.197.228","type":"http","country":"🏁ZZ","port":3128,"skip-cert-verify":true}
-- {"name":"🏁ZZ gpt claude grok fb nf tw yt tg S58_38","server":"199.7.149.90","type":"http","country":"🏁ZZ","port":3128,"skip-cert-verify":true}
-- {"name":"🏁ZZ nf S44_39","server":"195.133.65.238","type":"socks5","country":"🏁ZZ","port":10909,"udp":true}
-- {"name":"🏁ZZ tg claude nf grok fb S40_40","server":"3.238.2.73","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ tg S32_41","server":"184.73.118.63","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ claude tw gpt fb tg nf yt grok S46_42","server":"34.229.113.62","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ claude yt tg fb grok tw nf S44_43","server":"193.222.99.32","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ claude gpt tg grok nf yt fb tw S46_44","server":"134.209.18.113","type":"socks5","country":"🏁ZZ","port":1088,"udp":true}
-- {"name":"🏁ZZ tg S44_45","server":"185.170.10.176","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ gpt claude S43_46","server":"220.158.232.118","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ tw grok nf fb S38_47","server":"154.91.176.171","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ grok claude tg tw fb gpt yt S44_48","server":"213.136.92.91","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ gpt nf yt claude tg grok tw fb S58_49","server":"45.95.233.128","type":"socks5","country":"🏁ZZ","port":1082,"udp":true}
-- {"name":"🏁ZZ fb nf yt S36_50","server":"45.76.164.255","type":"socks5","country":"🏁ZZ","port":1085,"udp":true}
-- {"name":"🏁ZZ claude gpt yt tw tg grok S42_51","server":"140.245.36.86","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ nf claude S43_52","server":"220.158.233.26","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ claude tw S46_53","server":"217.25.229.244","type":"socks5","country":"🏁ZZ","port":2080,"udp":true}
-- {"name":"🏁ZZ fb S32_54","server":"65.21.252.66","type":"socks5","country":"🏁ZZ","port":10801,"udp":true}
-- {"name":"🏁ZZ tw S32_55","server":"149.248.21.106","type":"socks5","country":"🏁ZZ","port":8080,"udp":true}
-- {"name":"🏁ZZ gpt grok tg nf claude yt tw fb S46_56","server":"157.90.113.23","type":"socks5","country":"🏁ZZ","port":9052,"udp":true}
-- {"name":"🏁ZZ grok claude nf gpt tg fb tw yt S46_57","server":"152.228.237.108","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ nf grok yt gpt tg claude fb tw S46_58","server":"161.35.90.93","type":"socks5","country":"🏁ZZ","port":1083,"udp":true}
-- {"name":"🏁ZZ claude yt tw gpt fb tg grok S44_59","server":"152.32.168.221","type":"socks5","country":"🏁ZZ","port":10808,"udp":true}
-- {"name":"🏁ZZ claude fb nf gpt grok S52_60","server":"150.242.218.137","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ gpt claude tg nf grok fb yt tw S46_61","server":"45.144.54.40","type":"socks5","country":"🏁ZZ","port":1080,"udp":true}
-- {"name":"🏁ZZ nf yt S34_62","server":"65.21.252.66","type":"socks5","country":"🏁ZZ","port":10811,"udp":true}
+- {"name":"🌐 gpt grok claude yt nf tw tg fb S46_01","server":"51.195.126.38","type":"ss","port":8388,"password":"2YdE4lFOid5a","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🌐 gpt claude grok fb tw nf yt tg S46_02","server":"209.38.142.23","type":"ss","port":80,"password":"qfJZnq91w6aX8K1Y","cipher":"aes-256-gcm"}
+- {"name":"🌐 gpt grok claude nf yt fb tw tg S46_03","server":"51.77.225.200","type":"ss","port":8388,"password":"zRZNBszYyWo5","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🌐 claude gpt grok nf S38_04","server":"45.8.158.176","type":"ss","port":10801,"password":"1eadd4e4a37b6601","cipher":"aes-256-gcm"}
+- {"name":"🌐 gpt grok claude nf tg fb yt tw S46_05","server":"51.255.13.232","type":"ss","port":8388,"password":"BqnqToih0PbU","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🌐 grok gpt claude tw nf yt fb tg S46_06","server":"15.235.75.71","type":"ss","port":8388,"password":"FD3rCuOsxOay","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🌐 gpt tg claude nf grok fb tw yt S46_07","server":"64.188.77.159","type":"ss","port":8390,"password":"EyGy11BMfeP-6UHjsgajWw","cipher":"chacha20-ietf-poly1305"}
+- {"name":"🌐 claude gpt grok nf fb tw yt tg S46_08","server":"172.67.161.144","type":"vmess","port":8443,"uuid":"60441548-b68e-43b2-8191-e3b884be4b3c","alterId":0,"cipher":"auto","network":"ws","servername":"v2ray1.dozapp.xyz","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/lMnsZUN4/","headers":{"Host":"v2ray1.dozapp.xyz"}}}
+- {"name":"🌐 gpt claude grok tw nf fb yt tg S46_09","server":"node.socks5.kdns.fr","type":"vmess","port":443,"uuid":"37db053e-cb62-45bc-8a09-d2a9c2ebbd09","alterId":0,"cipher":"auto","network":"ws","servername":"booth-moreover-framework-thereafter.trycloudflare.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/37db053e-cb62-45bc-8a09-d2a9c2ebbd09-vm","headers":{"Host":"booth-moreover-framework-thereafter.trycloudflare.com"}}}
+- {"name":"🌐 gpt grok tw fb yt claude tg nf S46_10","server":"rush-w1niu.teeopp.online","type":"vmess","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","network":"ws","servername":"rush-w1niu.teeopp.online","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/video/v4sx3q/zxzrurkc.m3u8","headers":{"Host":"rush-w1niu.teeopp.online"}}}
+- {"name":"🌐 gpt grok claude fb tw yt nf tg S46_11","server":"216.128.176.166","type":"vmess","port":28809,"uuid":"ebca559c-a4a1-4062-9453-6412d8ff5255","alterId":0,"cipher":"auto","network":"ws","http-opts":{},"h2-opts":{},"ws-opts":{"path":"/ebca559c-a4a1-4062-9453-6412d8ff5255","headers":{"Host":"216.128.176.166"}}}
+- {"name":"🌐 claude tg gpt grok nf fb tw yt S46_12","server":"cf.levikogjgfdd.ir","type":"vmess","port":2053,"uuid":"9a1a05d9-69be-45d3-e326-c6621edf7b31","alterId":0,"cipher":"auto","network":"ws","servername":"deapp.jisuyun.top","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/devm","headers":{"Host":"deapp.jisuyun.top"}}}
+- {"name":"🌐 gpt grok claude nf fb tg tw yt S46_13","server":"rush-6it6b.teeopp.quest","type":"vmess","port":443,"uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"cipher":"auto","network":"ws","servername":"rush-6it6b.teeopp.quest","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/video/kz49hf/gbin5jve.m3u8","headers":{"Host":"rush-6it6b.teeopp.quest"}}}
+- {"name":"🌐 claude tw fb yt grok gpt nf tg S46_14","server":"150.109.240.179","type":"vmess","port":8443,"uuid":"f9dcb303-3e73-40eb-9327-1ac88f9a2b72","alterId":0,"cipher":"auto","network":"ws","servername":"www.bing.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/wsproxy"}}
+- {"name":"🌐 gpt claude grok fb tw yt nf tg S46_15","server":"tokyo02.zgjok.com","type":"vmess","port":443,"uuid":"3fe113f9-e564-4111-b8c7-11f597687689","alterId":0,"cipher":"auto","network":"ws","servername":"tokyo02.zgjok.com","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/"}}
+- {"name":"🌐 claude tg gpt grok fb nf tw yt S46_16","server":"deapp.jisuyun.top","type":"vmess","port":2053,"uuid":"9a1a05d9-69be-45d3-e326-c6621edf7b31","alterId":0,"cipher":"auto","network":"ws","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/devm"}}
+- {"name":"🌐 gpt claude fb grok nf yt tg tw S58_17","server":"128.14.181.220","type":"trojan","port":5555,"password":"fg20mtCFHy","sni":"www.bing.com","skip-cert-verify":true}
+- {"name":"🌐 gpt claude grok fb tw yt nf tg S46_18","server":"pet-albacore.rooster465.autos","type":"trojan","port":443,"password":"HC04361579","sni":"pet-albacore.rooster465.autos"}
+- {"name":"🌐 gpt grok claude fb yt tw tg nf S46_19","server":"57.180.13.78","type":"trojan","port":443,"password":"ND91608427","sni":"healthy-louse.rooster465.autos"}
+- {"name":"🌐 gpt claude grok fb tw yt nf tg S46_20","server":"ethical-raccoon.rooster465.autos","type":"trojan","port":443,"password":"PQ05174892"}
+- {"name":"🌐 claude gpt fb grok yt tw nf tg S46_21","server":"natural-swan.rooster465.autos","type":"trojan","port":443,"password":"FH72359861"}
+- {"name":"🌐 gpt claude grok tg yt fb tw S44_22","server":"kind-stork.rooster465.autos","type":"trojan","port":443,"password":"AE62539071","sni":"kind-stork.rooster465.autos"}
+- {"name":"🇨🇭 gpt claude tg fb grok nf yt tw S58_23","server":"tr-switzerlandgopota.unlimited-access.ru","type":"trojan","country":"🇨🇭","port":443,"password":"kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi","sni":"tr-switzerlandgopota.unlimited-access.ru","skip-cert-verify":true,"udp":true}
+- {"name":"🇩🇪 gpt claude tg nf yt tw grok fb S46_24","server":"45.144.54.40","type":"socks5","country":"🇩🇪","port":1080,"udp":true}
+- {"name":"🇪🇬 tg S44_25","server":"45.245.208.180","type":"http","country":"🇪🇬","port":8080,"skip-cert-verify":true}
+- {"name":"🇫🇮 yt gpt grok claude tg fb tw nf S46_26","server":"65.21.252.66","type":"socks5","country":"🇫🇮","port":10801,"udp":true}
+- {"name":"🇫🇮 nf yt tg fb tw claude gpt S44_27","server":"65.21.252.66","type":"socks5","country":"🇫🇮","port":10811,"udp":true}
+- {"name":"🇫🇷 gpt tg grok nf tw fb S42_28","server":"15.237.216.173","type":"ss","country":"🇫🇷","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+- {"name":"🇫🇷 claude S32_29","server":"35.180.75.159","type":"http","country":"🇫🇷","port":8157,"skip-cert-verify":true}
+- {"name":"🇫🇷 nf fb tw claude yt S40_30","server":"80.241.214.192","type":"http","country":"🇫🇷","port":3128,"skip-cert-verify":true}
+- {"name":"🇫🇷 gpt tw S46_31","server":"45.95.233.88","type":"socks5","country":"🇫🇷","port":1082,"udp":true}
+- {"name":"🇫🇷 claude gpt grok tg yt fb tw S44_32","server":"213.136.92.91","type":"socks5","country":"🇫🇷","port":1080,"udp":true}
+- {"name":"🇫🇷 yt tg S46_33","server":"45.95.233.128","type":"socks5","country":"🇫🇷","port":1082,"udp":true}
+- {"name":"🇬🇧 gpt grok nf tg claude tw yt fb S46_34","server":"134.209.18.113","type":"socks5","country":"🇬🇧","port":1088,"udp":true}
+- {"name":"🇭🇰 grok claude gpt yt nf tw fb tg S46_35","server":"47.86.107.20","type":"trojan","country":"🇭🇰","port":5443,"password":"fg20mtCFHy","sni":"hytfes.southbyte.xyz","skip-cert-verify":true,"udp":true}
+- {"name":"🇭🇰 gpt yt fb tw claude nf tg grok S46_36","server":"95.40.233.164","type":"http","country":"🇭🇰","port":3128,"skip-cert-verify":true}
+- {"name":"🇭🇰 gpt claude yt tw fb tg grok S44_37","server":"152.32.168.221","type":"socks5","country":"🇭🇰","port":10808,"udp":true}
+- {"name":"🇭🇰 claude grok nf tw yt gpt tg S56_38","server":"150.242.218.137","type":"socks5","country":"🇭🇰","port":1080,"udp":true}
+- {"name":"🇮🇳 gpt S32_39","server":"43.205.125.76","type":"http","country":"🇮🇳","port":27320,"skip-cert-verify":true}
+- {"name":"🇯🇵 grok gpt claude tw yt fb nf tg S46_40","server":"definite-gazelle.rooster465.autos","type":"trojan","country":"🇯🇵","port":443,"password":"EQ30679154","sni":"definite-gazelle.rooster465.autos","skip-cert-verify":true,"udp":true}
+- {"name":"🇰🇭 claude tw yt S45_41","server":"220.158.233.26","type":"socks5","country":"🇰🇭","port":1080,"udp":true}
+- {"name":"🇳🇱 fb tg S34_42","server":"193.233.126.24","type":"socks5","country":"🇳🇱","port":10800,"udp":true}
+- {"name":"🇳🇱 claude nf tg gpt grok fb yt tw S46_43","server":"161.35.90.93","type":"socks5","country":"🇳🇱","port":1083,"udp":true}
+- {"name":"🇷🇺 claude grok gpt nf yt fb tw tg S46_44","server":"195.133.53.59","type":"http","country":"🇷🇺","port":10809,"skip-cert-verify":true}
+- {"name":"🇷🇺 gpt claude grok yt tw nf S42_45","server":"85.198.82.207","type":"socks5","country":"🇷🇺","port":1080,"udp":true}
+- {"name":"🇷🇺 claude gpt tg fb nf yt grok tw S46_46","server":"89.23.102.250","type":"socks5","country":"🇷🇺","port":1080,"udp":true}
+- {"name":"🇷🇺 grok S44_47","server":"158.46.23.102","type":"socks5","country":"🇷🇺","port":10080,"udp":true}
+- {"name":"🇸🇦 gpt grok fb claude tw nf yt tg S46_48","server":"130.110.103.245","type":"http","country":"🇸🇦","port":3128,"skip-cert-verify":true}
+- {"name":"🇸🇨 tw fb claude nf tg S40_49","server":"154.91.176.171","type":"socks5","country":"🇸🇨","port":1080,"udp":true}
+- {"name":"🇸🇬 claude grok fb nf tg tw gpt yt S46_50","server":"140.245.36.86","type":"socks5","country":"🇸🇬","port":1080,"udp":true}
+- {"name":"🇺🇸 claude gpt nf fb grok tw yt tg S58_51","server":"128.14.148.84","type":"trojan","country":"🇺🇸","port":5531,"password":"fg20mtCFHy","sni":"ycgsc.southbyte.xyz","skip-cert-verify":true,"udp":true}
+- {"name":"🇺🇸 claude grok gpt fb nf tw yt tg S46_52","server":"98.83.197.228","type":"http","country":"🇺🇸","port":3128,"skip-cert-verify":true}
+- {"name":"🇺🇸 fb gpt grok claude tw nf tg yt S58_53","server":"199.7.149.90","type":"http","country":"🇺🇸","port":3128,"skip-cert-verify":true}
+- {"name":"🇺🇸 fb tg S34_54","server":"34.207.102.197","type":"http","country":"🇺🇸","port":38640,"skip-cert-verify":true}
+- {"name":"🇺🇸 gpt yt nf grok fb S40_55","server":"34.229.113.62","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
+- {"name":"🇺🇸 claude gpt tw tg fb grok S42_56","server":"45.76.164.255","type":"socks5","country":"🇺🇸","port":1085,"udp":true}
+- {"name":"🇺🇸 claude yt S34_57","server":"184.73.118.63","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
+- {"name":"🇺🇸 tw gpt grok tg nf fb S42_58","server":"43.162.94.99","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
+- {"name":"🇺🇸 gpt S32_59","server":"3.238.2.73","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "♻️ 自动选择"
+      - DIRECT
+      - .*
+  - name: "♻️ 自动选择"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: [".*"]
+  - name: "🌍 国外媒体"
+    type: select
+    proxies:
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+      - "🎯 全球直连"
+      - .*
+  - name: "📲 电报信息"
+    type: select
+    proxies:
+      - "🚀 节点选择"
+      - "🎯 全球直连"
+      - .*
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies:
+      - "🎯 全球直连"
+      - "🚀 节点选择"
+      - .*
+  - name: "🍎 苹果服务"
+    type: select
+    proxies:
+      - "🚀 节点选择"
+      - "🎯 全球直连"
+      - .*
+  - name: "🎯 全球直连"
+    type: select
+    proxies:
+      - DIRECT
+      - "🚀 节点选择"
+      - "♻️ 自动选择"
+  - name: "🛑 全球拦截"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: "🍃 应用净化"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+      - "🚀 节点选择"
+      - "🎯 全球直连"
+      - "♻️ 自动选择"
+      - .*
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+    path: ./ruleset/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    path: ./ruleset/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    path: ./ruleset/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
+    path: ./ruleset/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+    path: ./ruleset/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
+    path: ./ruleset/Apple.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
+    path: ./ruleset/Telegram.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+    path: ./ruleset/ProxyMedia.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    path: ./ruleset/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    path: ./ruleset/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    path: ./ruleset/ChinaCompanyIp.list
+    interval: 86400
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Telegram,📲 电报信息
+  - RULE-SET,ProxyMedia,🌍 国外媒体
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
