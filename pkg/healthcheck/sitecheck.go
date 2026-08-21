@@ -102,6 +102,11 @@ func checkSitesForProxy(p proxy.Proxy) []string {
 		return nil
 	}
 
+	// vless/hysteria2 not supported by Dreamacro/clash adapter — skip site check
+	if p.TypeName() == "vless" || p.TypeName() == "hysteria2" {
+		return nil
+	}
+
 	clashProxy, err := adapter.ParseProxy(pmap)
 	if err != nil {
 		return nil
