@@ -111,8 +111,35 @@ func continuousDownloadTest(p proxy.Proxy) (speedMbps float64, stable bool) {
 		return 0, false
 	}
 
+	// vless/hysteria2: test TCP (vless) or UDP (hy2) connectivity directly
+	// since Dreamacro/clash v1.16 adapter doesn't support these protocols
+	if p.TypeName() == "vless" || p.TypeName() == "hysteria2" {
+		host, _ := pmap["server"].(string)
+		port := fmt.Sprint(pmap["port"].(int))
+		if p.TypeName() == "vless" {
+			// vless runs over TCP
+			if _, interval, err := netConnectivity(host, port); err == nil {
+				speed := 1000.0 / float64(interval.Milliseconds()+1)
+				return speed, true
+			}
+		} else {
+			// hysteria2 runs over UDP (QUIC) — test UDP reachability
+			if interval, err := udpConnectivity(host, port); err == nil {
+				speed := 1000.0 / float64(interval.Milliseconds()+1)
+				return speed, true
+			}
+		}
+		return 0, false
+	}
+
 	clashProxy, err := adapter.ParseProxy(pmap)
 	if err != nil {
+		// Fallback to TCP test if adapter fails
+		host, _ := pmap["server"].(string)
+		port := fmt.Sprint(pmap["port"].(int))
+		if _, interval, err := netConnectivity(host, port); err == nil {
+			return float64(interval.Milliseconds()), true
+		}
 		return 0, false
 	}
 
@@ -227,6 +254,18 @@ func continuousDownloadTest(p proxy.Proxy) (speedMbps float64, stable bool) {
 type simplePool struct {
 	wg      sync.WaitGroup
 	workers chan func()
+}
+
+// udpConnectivity tests UDP reachability for QUIC-based protocols (hysteria2).
+func udpConnectivity(host string, port string) (time.Duration, error) {
+	addr := net.JoinHostPort(host, port)
+	start := time.Now()
+	conn, err := net.DialTimeout("udp", addr, 3*time.Second)
+	if err != nil {
+		return 0, err
+	}
+	conn.Close()
+	return time.Since(start), nil
 }
 
 func newSimplePool(n int) *simplePool {
