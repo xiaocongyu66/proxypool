@@ -70,6 +70,16 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 	}
 	proxiesStr := clash.Provide()
 
+	// Ensure each proxy line has proper indentation (2 spaces before -)
+	// Clash provider outputs "- {...}" at column 0, needs "  - {...}"
+	proxiesLines := strings.Split(proxiesStr, "\n")
+	for i, line := range proxiesLines {
+		if strings.HasPrefix(line, "- ") {
+			proxiesLines[i] = "  " + line
+		}
+	}
+	proxiesStr = strings.Join(proxiesLines, "\n")
+
 	// Build proxy name list for proxy-groups (each line: "      - \"name\"")
 	var nameLines strings.Builder
 	for _, p := range proxies {
@@ -95,7 +105,7 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 	sb.WriteString("\n\n")
 	sb.WriteString(clashRules)
 	sb.WriteString("\n")
-	sb.WriteString(hiddenComment)
+	sb.WriteString(hiddenComment + "\n")
 	return sb.String()
 }
 
