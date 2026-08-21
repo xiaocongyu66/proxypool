@@ -83,37 +83,35 @@ func CrawlGo() {
 	log.Infoln("SocksProxiesCount: %d", cache.SocksProxiesCount)
 	cache.LastCrawlTime = time.Now().In(location).Format("2006-01-02 15:04:05")
 
-	// === Stage 1: Fast connectivity test (delay check) ===
-	log.Infoln("Stage 1: Fast connectivity health check...")
-	healthcheck.SpeedConn = C.Config.SpeedConnection
+	// === Stage 1: Fast TCP connectivity test (like SmartSub, no clash adapter) ===
+	log.Infoln("Stage 1: Fast TCP connectivity test...")
 	healthcheck.DelayConn = C.Config.HealthCheckConnection
 	if healthcheck.DelayConn < 1000 {
 		healthcheck.DelayConn = 1000
 	}
-	healthcheck.DelayTimeout = 3 * time.Second
-	if C.Config.HealthCheckTimeout > 0 {
-		healthcheck.DelayTimeout = time.Second * time.Duration(C.Config.HealthCheckTimeout)
-	}
-	log.Infoln("CONF: Stage 1 timeout=%s, concurrency=%d", healthcheck.DelayTimeout, healthcheck.DelayConn)
+	log.Infoln("CONF: Stage 1 concurrency=%d", healthcheck.DelayConn)
 
-	proxies = healthcheck.CleanBadProxiesWithGrpool(proxies)
-	log.Infoln("Stage 1 done: usable proxy count: %d", len(proxies))
+	proxies = healthcheck.TCPConnectTestAll(proxies)
+	log.Infoln("Stage 1 done: TCP reachable proxy count: %d", len(proxies))
 
+	// Skip clash-based delay test — TCP test already filtered unreachable nodes.
 	// Format name like US_01 sorted by country
 	proxies.NameAddCounrty().Sort()
 	log.Infoln("Proxy rename DONE!")
 
-	// Relay check and rename
-	healthcheck.RelayCheck(proxies)
-	for i := range proxies {
-		if s, ok := healthcheck.ProxyStats.Find(proxies[i]); ok {
-			if s.Relay {
-				_, c, e := geoIp.GeoIpDB.Find(s.OutIp)
-				if e == nil {
-					proxies[i].SetName(fmt.Sprintf("Relay_%s-%s", proxies[i].BaseInfo().Name, c))
+	// Relay check and rename (skip if too few nodes)
+	if len(proxies) > 0 && len(proxies) < 500 {
+		healthcheck.RelayCheck(proxies)
+		for i := range proxies {
+			if s, ok := healthcheck.ProxyStats.Find(proxies[i]); ok {
+				if s.Relay {
+					_, c, e := geoIp.GeoIpDB.Find(s.OutIp)
+					if e == nil {
+						proxies[i].SetName(fmt.Sprintf("Relay_%s-%s", proxies[i].BaseInfo().Name, c))
+					}
+				} else if s.Pool {
+					proxies[i].SetName(fmt.Sprintf("Pool_%s", proxies[i].BaseInfo().Name))
 				}
-			} else if s.Pool {
-				proxies[i].SetName(fmt.Sprintf("Pool_%s", proxies[i].BaseInfo().Name))
 			}
 		}
 	}
@@ -139,13 +137,13 @@ func CrawlGo() {
 	proxies = ipFiltered
 	log.Infoln("Stage 2 done: IP filter %d -> %d (removed %d dirty nodes)", beforeIpFilter, len(proxies), beforeIpFilter-len(proxies))
 
-	// === Stage 3: Continuous 10s speed test (filters unstable nodes) ===
+	// === Stage 3: Continuous speed test (high concurrency, with cap) ===
 	log.Infoln("Stage 3: Continuous 10s speed test...")
 	if C.Config.SpeedTest {
 		cache.IsSpeedTest = "已开启"
 		healthcheck.SpeedConn = C.Config.SpeedConnection
-		if healthcheck.SpeedConn < 50 {
-			healthcheck.SpeedConn = 50
+		if healthcheck.SpeedConn < 100 {
+			healthcheck.SpeedConn = 100
 		}
 		if C.Config.SpeedTimeout > 0 {
 			healthcheck.SpeedTimeout = time.Second * time.Duration(C.Config.SpeedTimeout)
