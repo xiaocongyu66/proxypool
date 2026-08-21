@@ -33,44 +33,46 @@ dns:
       - 240.0.0.0/4`
 
 // clashProxyGroups defines the proxy-groups section (ACL4SSR style).
+// Uses {{PROXY_NAMES}} placeholder which is replaced with actual node names.
 const clashProxyGroups = `proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
       - "♻️ 自动选择"
       - DIRECT
-      - .*
+{{PROXY_NAMES}}
   - name: "♻️ 自动选择"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    proxies: [".*"]
+    proxies:
+{{PROXY_NAMES}}
   - name: "🌍 国外媒体"
     type: select
     proxies:
       - "🚀 节点选择"
       - "♻️ 自动选择"
       - "🎯 全球直连"
-      - .*
+{{PROXY_NAMES}}
   - name: "📲 电报信息"
     type: select
     proxies:
       - "🚀 节点选择"
       - "🎯 全球直连"
-      - .*
+{{PROXY_NAMES}}
   - name: "Ⓜ️ 微软服务"
     type: select
     proxies:
       - "🎯 全球直连"
       - "🚀 节点选择"
-      - .*
+{{PROXY_NAMES}}
   - name: "🍎 苹果服务"
     type: select
     proxies:
       - "🚀 节点选择"
       - "🎯 全球直连"
-      - .*
+{{PROXY_NAMES}}
   - name: "🎯 全球直连"
     type: select
     proxies:
@@ -93,7 +95,7 @@ const clashProxyGroups = `proxy-groups:
       - "🚀 节点选择"
       - "🎯 全球直连"
       - "♻️ 自动选择"
-      - .*`
+{{PROXY_NAMES}}`
 
 // clashRuleProviders defines rule-providers (ACL4SSR rule sets).
 const clashRuleProviders = `rule-providers:
