@@ -255,19 +255,55 @@ func computeScore(ps *Stat) int {
 	return score
 }
 
-// FormatProxyName generates a node name: Country + Speed + Sites + Score
-// Example: "US 25.3Mb yt gpt tw S88"
-// If too long, sites are trimmed.
+// countryCodeToName maps ISO country codes to Chinese names.
+var countryCodeToName = map[string]string{
+	"US": "美国", "CN": "中国", "JP": "日本", "KR": "韩国", "HK": "香港",
+	"TW": "台湾", "SG": "新加坡", "GB": "英国", "DE": "德国", "FR": "法国",
+	"CA": "加拿大", "AU": "澳大利亚", "NL": "荷兰", "RU": "俄罗斯", "IN": "印度",
+	"BR": "巴西", "TH": "泰国", "VN": "越南", "MY": "马来西亚", "ID": "印尼",
+	"PH": "菲律宾", "TR": "土耳其", "IT": "意大利", "ES": "西班牙", "CH": "瑞士",
+	"SE": "瑞典", "NO": "挪威", "FI": "芬兰", "DK": "丹麦", "BE": "比利时",
+	"AT": "奥地利", "IE": "爱尔兰", "PT": "葡萄牙", "PL": "波兰", "CZ": "捷克",
+	"RO": "罗马尼亚", "UA": "乌克兰", "BG": "保加利亚", "RS": "塞尔维亚",
+	"HR": "克罗地亚", "SK": "斯洛伐克", "HU": "匈牙利", "GR": "希腊", "IL": "以色列",
+	"AE": "阿联酋", "SA": "沙特", "EG": "埃及", "ZA": "南非", "AR": "阿根廷",
+	"CL": "智利", "CO": "哥伦比亚", "PE": "秘鲁", "MX": "墨西哥", "NZ": "新西兰",
+}
+
+// formatCountry extracts emoji flag and Chinese name from country string.
+// Input format from GeoIP: "🇺🇸US" → returns "🇺🇸 美国"
+func formatCountry(country string) string {
+	if country == "" || country == "🏁ZZ" {
+		return "🌐 未知"
+	}
+	// Extract emoji (first runes that are flag emojis) and code
+	var emoji, code string
+	runes := []rune(country)
+	for i, r := range runes {
+		if r >= 0x1F1E6 && r <= 0x1F1FF {
+			emoji += string(r)
+		} else {
+			code = string(runes[i:])
+			break
+		}
+	}
+	if code == "" {
+		return country
+	}
+	if name, ok := countryCodeToName[code]; ok {
+		return emoji + " " + name
+	}
+	return emoji + " " + code
+}
+
+// FormatProxyName generates a node name: 🇺🇸 美国 25.3Mb yt gpt tw S88
 func FormatProxyName(p proxy.Proxy, maxLen int) string {
 	ps, ok := ProxyStats.Find(p)
 	if !ok {
 		return p.BaseInfo().Name
 	}
 
-	country := p.BaseInfo().Country
-	if country == "" {
-		country = "ZZ"
-	}
+	country := formatCountry(p.BaseInfo().Country)
 
 	// Speed: show as Mb
 	speedStr := ""
