@@ -86,7 +86,7 @@ func Parse() error {
 
 	// set default
 	if Config.SpeedConnection <= 0 {
-		Config.SpeedConnection = 50
+		Config.SpeedConnection = 100
 	}
 	if Config.SpeedTimeout <= 0 {
 		Config.SpeedTimeout = 10
