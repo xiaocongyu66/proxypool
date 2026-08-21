@@ -3,6 +3,8 @@ package getter
 import (
 	"fmt"
 	"io"
+	"net/url"
+	"regexp"
 	"strings"
 	"sync"
 
@@ -60,10 +62,16 @@ func (g *TGChannelGetter) Get() proxy.ProxyList {
 	// 找到所有的文字消息
 	g.c.OnHTML("div.tgme_widget_message_text", func(e *colly.HTMLElement) {
 		g.results = append(g.results, GrepLinksFromString(e.Text)...)
+		// 解析 Telegram SOCKS 代理链接: t.me/socks?server=IP&port=PORT 或 tg://socks?...
+		for _, link := range parseTelegramProxyLinks(e.Text) {
+			if p, err := proxy.ParseProxyFromLink(link); err == nil && p != nil {
+				result = append(result, p)
+			}
+		}
 		// 抓取到http链接，有可能是订阅链接或其他链接，无论如何试一下
 		subUrls := urlRe.FindAllString(e.Text, -1)
-		for _, url := range subUrls {
-			result = append(result, (&Subscribe{Url: url}).Get()...)
+		for _, u := range subUrls {
+			result = append(result, (&Subscribe{Url: u}).Get()...)
 		}
 	})
 
@@ -113,4 +121,38 @@ func (g *TGChannelGetter) Get2ChanWG(pc chan proxy.Proxy, wg *sync.WaitGroup) {
 	for _, node := range nodes {
 		pc <- node
 	}
+}
+
+var tgProxyLinkRe = regexp.MustCompile(`(?:https?://t\.me/socks\?|tg://socks\?|https?://t\.me/proxy\?|tg://proxy\?)([^"'<>\s]+)`)
+
+// parseTelegramProxyLinks extracts Telegram proxy links from text.
+// Supports: t.me/socks?server=IP&port=PORT, tg://socks?server=IP&port=PORT
+// Converts them to socks5://IP:PORT format.
+func parseTelegramProxyLinks(text string) []string {
+	results := make([]string, 0)
+	matches := tgProxyLinkRe.FindAllStringSubmatch(text, -1)
+	for _, m := range matches {
+		rawQuery := m[1]
+		// Extract server and port from query params
+		vals, err := url.ParseQuery(rawQuery)
+		if err != nil {
+			continue
+		}
+		server := vals.Get("server")
+		port := vals.Get("port")
+		if server == "" || port == "" {
+			continue
+		}
+		user := vals.Get("user")
+		pass := vals.Get("pass")
+		// Determine protocol: socks or proxy (proxy = MTProto, skip for now)
+		if strings.Contains(m[0], "socks") {
+			if user != "" && pass != "" {
+				results = append(results, fmt.Sprintf("socks5://%s:%s@%s:%s", user, pass, server, port))
+			} else {
+				results = append(results, fmt.Sprintf("socks5://%s:%s", server, port))
+			}
+		}
+	}
+	return results
 }
