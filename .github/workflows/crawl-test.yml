@@ -63,6 +63,25 @@ jobs:
             git push origin main
           fi
 
+      - name: Update latest tag (delete old, create new)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="latest-nodes"
+          # Delete old tag (remote + local)
+          gh release delete "$TAG" --yes --repo xiaocongyu66/proxypool 2>/dev/null || true
+          git push origin :refs/tags/$TAG 2>/dev/null || true
+          git tag -d $TAG 2>/dev/null || true
+          # Create new tag on latest commit
+          git tag $TAG
+          git push origin $TAG
+          # Create a release with output files attached
+          gh release create "$TAG" \
+            --repo xiaocongyu66/proxypool \
+            --title "Latest Proxy Nodes $(date -u '+%Y-%m-%d %H:%M') UTC" \
+            --notes "Auto-generated proxy nodes. Updated every 12 hours." \
+            output/clash.yml output/v2ray.txt output/singbox.json output/nodes.txt output/high_quality.txt output/quality_report.json 2>/dev/null || true
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
