@@ -18,8 +18,9 @@ import (
 
 // 持续测速下载测试 URL（使用 Cloudflare 的 speed test 端点，全球可达、稳定、低延迟）
 const speedTestDownloadURL = "https://speed.cloudflare.com/__down?bytes="
-const speedTestDuration = 10 * time.Second
+const speedTestDuration = 5 * time.Second
 const speedTestMaxBytes = 5 * 1024 * 1024 // 5MB cap to limit bandwidth
+const speedTestCap = 200                    // stop after finding 200 stable nodes
 
 // SpeedTestContinuousAll runs a 10-second continuous download test for all proxies.
 // Results (Mbps) are stored in ProxyStats. Unstable proxies are filtered out.
@@ -39,7 +40,7 @@ func speedTestContinuous(proxies []proxy.Proxy, onlyNew bool) proxy.ProxyList {
 	}
 	numWorker := SpeedConn
 	if numWorker <= 0 {
-		numWorker = 50
+		numWorker = 100
 	}
 	if numWorker > 500 {
 		numWorker = 500
@@ -50,9 +51,15 @@ func speedTestContinuous(proxies []proxy.Proxy, onlyNew bool) proxy.ProxyList {
 	dcm := sync.Mutex{}
 
 	pool := newSimplePool(numWorker)
-	pool.waitCount(len(proxies))
 
 	for _, p := range proxies {
+		m.Lock()
+		if len(result) >= speedTestCap {
+			m.Unlock()
+			break
+		}
+		m.Unlock()
+
 		pp := p
 		pool.submit(func() {
 			defer pool.jobDone()
