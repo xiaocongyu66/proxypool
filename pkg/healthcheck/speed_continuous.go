@@ -20,7 +20,6 @@ import (
 const speedTestDownloadURL = "https://speed.cloudflare.com/__down?bytes="
 const speedTestDuration = 5 * time.Second
 const speedTestMaxBytes = 5 * 1024 * 1024 // 5MB cap to limit bandwidth
-const speedTestCap = 200                    // stop after finding 200 stable nodes
 
 // SpeedTestContinuousAll runs a 10-second continuous download test for all proxies.
 // Results (Mbps) are stored in ProxyStats. Unstable proxies are filtered out.
@@ -53,13 +52,6 @@ func speedTestContinuous(proxies []proxy.Proxy, onlyNew bool) proxy.ProxyList {
 	pool := newSimplePool(numWorker)
 
 	for _, p := range proxies {
-		m.Lock()
-		if len(result) >= speedTestCap {
-			m.Unlock()
-			break
-		}
-		m.Unlock()
-
 		pp := p
 		pool.submit(func() {
 			defer pool.jobDone()
