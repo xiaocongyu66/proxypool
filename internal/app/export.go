@@ -2,6 +2,7 @@ package app
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -69,17 +70,27 @@ func generateClashYaml(proxies proxy.ProxyList) string {
 	}
 	proxiesStr := clash.Provide()
 
+	// Build proxy name list for proxy-groups
+	var nameLines strings.Builder
+	for _, p := range proxies {
+		nameLines.WriteString(fmt.Sprintf("      - \"%s\"\n", p.BaseInfo().Name))
+	}
+	proxyNames := strings.TrimSpace(nameLines.String())
+
+	// Replace {{PROXY_NAMES}} placeholders
+	groups := strings.ReplaceAll(clashProxyGroups, "{{PROXY_NAMES}}", proxyNames)
+
 	// Build full clash config with rules + proxy-groups
 	var sb strings.Builder
 	sb.WriteString(hiddenComment + "\n")
 	sb.WriteString(clashFullConfigHeader)
-	sb.WriteString("\n")
+	sb.WriteString("\n\n")
 	sb.WriteString(proxiesStr)
 	sb.WriteString("\n")
-	sb.WriteString(clashProxyGroups)
-	sb.WriteString("\n")
+	sb.WriteString(groups)
+	sb.WriteString("\n\n")
 	sb.WriteString(clashRuleProviders)
-	sb.WriteString("\n")
+	sb.WriteString("\n\n")
 	sb.WriteString(clashRules)
 	return sb.String()
 }
