@@ -1,7 +1,47 @@
 {
   "outbounds": [
     {
-      "tag": "🌐 gpt grok claude yt fb tw nf tg S46_01",
+      "tag": "🌐 claude gpt grok nf yt tg tw fb S46_01",
+      "type": "shadowsocks",
+      "server": "51.77.225.200",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zRZNBszYyWo5"
+    },
+    {
+      "tag": "🌐 gpt claude tg fb nf grok yt tw S46_02",
+      "type": "shadowsocks",
+      "server": "31.76.82.131",
+      "server_port": 34260,
+      "method": "chacha20-ietf-poly1305",
+      "password": "cTAObwg4OWWXkZJQs0ZdgC"
+    },
+    {
+      "tag": "🌐 gpt grok fb claude tw yt nf tg S46_03",
+      "type": "shadowsocks",
+      "server": "15.235.75.71",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "FD3rCuOsxOay"
+    },
+    {
+      "tag": "🌐 grok nf claude gpt tg yt fb tw S46_04",
+      "type": "shadowsocks",
+      "server": "51.195.126.38",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "2YdE4lFOid5a"
+    },
+    {
+      "tag": "🌐 gpt grok claude nf tw yt fb tg S46_05",
+      "type": "vmess",
+      "server": "155.248.176.44",
+      "server_port": 55216,
+      "uuid": "154dbc39-0921-cf11-29bd-156c5000d763",
+      "cipher": "auto"
+    },
+    {
+      "tag": "🌐 claude grok gpt yt tw nf fb tg S46_06",
       "type": "vmess",
       "server": "www.shopify.com",
       "server_port": 443,
@@ -21,37 +61,37 @@
       }
     },
     {
-      "tag": "🌐 grok claude gpt yt tw fb nf tg S46_02",
-      "type": "vmess",
-      "server": "155.248.176.44",
-      "server_port": 55216,
-      "uuid": "154dbc39-0921-cf11-29bd-156c5000d763",
-      "cipher": "auto"
+      "tag": "🇦🇺 gpt S32_07",
+      "type": "http",
+      "server": "16.50.56.246",
+      "server_port": 9991
     },
     {
-      "tag": "🇧🇩 tg yt S46_03",
+      "tag": "🇦🇺 claude S32_08",
+      "type": "http",
+      "server": "16.26.208.68",
+      "server_port": 13281
+    },
+    {
+      "tag": "🇧🇩 fb S44_09",
       "type": "socks",
       "server": "118.179.93.216",
       "server_port": 9090
     },
     {
-      "tag": "🇨🇦 grok claude gpt fb nf tw yt tg S46_04",
-      "type": "shadowsocks",
-      "server": "15.235.75.71",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "FD3rCuOsxOay"
+      "tag": "🇧🇷 yt S32_10",
+      "type": "http",
+      "server": "18.231.254.94",
+      "server_port": 28165
     },
     {
-      "tag": "🇨🇳 fb yt tg gpt tw nf grok claude S58_05",
-      "type": "shadowsocks",
-      "server": "121.46.230.138",
-      "server_port": 65443,
-      "method": "aes-256-cfb",
-      "password": "7eadc6dbe2ae"
+      "tag": "🇨🇦 claude S32_11",
+      "type": "http",
+      "server": "40.176.84.249",
+      "server_port": 40807
     },
     {
-      "tag": "🇨🇳 gpt claude grok yt nf tg tw fb S58_06",
+      "tag": "🇨🇳 gpt tw nf yt tg fb claude grok S58_12",
       "type": "shadowsocks",
       "server": "121.46.230.232",
       "server_port": 65443,
@@ -59,7 +99,7 @@
       "password": "7eadc6dbe2ae"
     },
     {
-      "tag": "🇨🇳 gpt claude fb tw grok yt nf tg S58_07",
+      "tag": "🇨🇳 tw fb claude gpt yt nf grok tg S58_13",
       "type": "shadowsocks",
       "server": "121.46.230.233",
       "server_port": 65443,
@@ -67,249 +107,117 @@
       "password": "7eadc6dbe2ae"
     },
     {
-      "tag": "🇨🇳 grok gpt claude nf fb yt tg tw S46_08",
-      "type": "vmess",
-      "server": "v6.hdacd.com",
-      "server_port": 30806,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "alter_id": 2,
-      "cipher": "auto"
-    },
-    {
-      "tag": "🇨🇳 grok nf gpt claude tg fb yt tw S46_09",
-      "type": "vmess",
-      "server": "v4.hdacd.com",
-      "server_port": 30804,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "alter_id": 2,
-      "cipher": "auto"
-    },
-    {
-      "tag": "🇨🇳 claude grok nf gpt fb tg tw yt S46_10",
-      "type": "vmess",
-      "server": "v29.hdacd.com",
-      "server_port": 30829,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "alter_id": 2,
-      "cipher": "auto"
-    },
-    {
-      "tag": "🇨🇴 gpt tw tg S48_11",
-      "type": "http",
-      "server": "186.97.236.99",
-      "server_port": 8080
-    },
-    {
-      "tag": "🇩🇪 grok gpt nf claude tg fb yt tw S46_12",
+      "tag": "🇨🇳 gpt claude tg grok yt nf tw S56_14",
       "type": "shadowsocks",
-      "server": "51.195.126.38",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "2YdE4lFOid5a"
+      "server": "121.46.230.138",
+      "server_port": 65443,
+      "method": "aes-256-cfb",
+      "password": "7eadc6dbe2ae"
     },
     {
-      "tag": "🇩🇪 claude gpt nf fb grok yt tw tg S46_13",
+      "tag": "🇨🇳 claude nf S46_15",
+      "type": "socks",
+      "server": "101.96.219.251",
+      "server_port": 44074
+    },
+    {
+      "tag": "🇨🇳 claude nf S46_16",
+      "type": "socks",
+      "server": "101.96.219.251",
+      "server_port": 44027
+    },
+    {
+      "tag": "🇨🇳 claude S44_17",
+      "type": "socks",
+      "server": "101.96.219.251",
+      "server_port": 44024
+    },
+    {
+      "tag": "🇨🇳 claude nf S46_18",
+      "type": "socks",
+      "server": "101.96.219.251",
+      "server_port": 44203
+    },
+    {
+      "tag": "🇨🇳 nf claude S46_19",
+      "type": "socks",
+      "server": "101.96.219.251",
+      "server_port": 44086
+    },
+    {
+      "tag": "🇩🇪 fb grok S34_20",
+      "type": "http",
+      "server": "18.157.159.247",
+      "server_port": 10720
+    },
+    {
+      "tag": "🇩🇪 grok S32_21",
+      "type": "http",
+      "server": "18.185.116.137",
+      "server_port": 59865
+    },
+    {
+      "tag": "🇩🇪 fb grok gpt claude tg nf tw yt S46_22",
       "type": "socks",
       "server": "5.75.133.113",
-      "server_port": 10801
+      "server_port": 10808
     },
     {
-      "tag": "🇩🇪 claude fb S34_14",
+      "tag": "🇩🇪 yt claude tw nf tg fb S42_23",
       "type": "socks",
-      "server": "157.90.113.23",
-      "server_port": 9052
+      "server": "49.13.22.249",
+      "server_port": 10811
     },
     {
-      "tag": "🇩🇪 claude S32_15",
-      "type": "socks",
-      "server": "84.200.205.35",
-      "server_port": 1080
-    },
-    {
-      "tag": "🇩🇪 gpt tg claude nf grok fb tw yt S46_16",
+      "tag": "🇩🇪 claude tg nf grok fb tw yt gpt S46_24",
       "type": "socks",
       "server": "45.144.54.40",
       "server_port": 1080
     },
     {
-      "tag": "🇪🇨 nf fb claude S48_17",
-      "type": "http",
-      "server": "181.39.62.146",
-      "server_port": 999
-    },
-    {
-      "tag": "🇪🇬 gpt fb tw yt S50_18",
-      "type": "http",
-      "server": "41.196.16.233",
-      "server_port": 1976
-    },
-    {
-      "tag": "🇪🇬 nf tw S46_19",
-      "type": "http",
-      "server": "41.33.219.140",
-      "server_port": 1976
-    },
-    {
-      "tag": "🇪🇬 gpt S44_20",
-      "type": "http",
-      "server": "45.245.208.180",
-      "server_port": 8080
-    },
-    {
-      "tag": "🇪🇬 fb nf tw gpt yt tg S54_21",
-      "type": "http",
-      "server": "41.33.219.140",
-      "server_port": 1981
-    },
-    {
-      "tag": "🇪🇬 nf tg S46_22",
-      "type": "http",
-      "server": "41.196.16.233",
-      "server_port": 1981
-    },
-    {
-      "tag": "🇪🇬 gpt fb claude nf grok yt tw S56_23",
-      "type": "http",
-      "server": "41.128.90.50",
-      "server_port": 1976
-    },
-    {
-      "tag": "🇫🇮 yt S32_24",
+      "tag": "🇩🇪 gpt claude nf fb tw grok yt tg S46_25",
       "type": "socks",
-      "server": "65.21.252.66",
-      "server_port": 10808
+      "server": "5.75.133.113",
+      "server_port": 10801
     },
     {
-      "tag": "🇫🇷 grok claude gpt yt tg fb nf tw S46_25",
-      "type": "shadowsocks",
-      "server": "51.77.225.200",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "zRZNBszYyWo5"
-    },
-    {
-      "tag": "🇫🇷 tg claude tw grok gpt nf yt S44_26",
+      "tag": "🇩🇪 yt S32_26",
       "type": "socks",
-      "server": "158.220.99.85",
-      "server_port": 4545
+      "server": "150.241.70.126",
+      "server_port": 1080
     },
     {
-      "tag": "🇬🇧 grok gpt fb tg claude tw nf yt S46_27",
+      "tag": "🇪🇪 gpt claude fb nf tw tg yt S44_27",
+      "type": "socks",
+      "server": "5.45.119.70",
+      "server_port": 1080
+    },
+    {
+      "tag": "🇫🇷 yt S44_28",
+      "type": "socks",
+      "server": "45.95.233.128",
+      "server_port": 1082
+    },
+    {
+      "tag": "🇫🇷 claude gpt grok tw tg nf yt fb S46_29",
+      "type": "socks",
+      "server": "51.178.49.241",
+      "server_port": 1088
+    },
+    {
+      "tag": "🇬🇧 gpt nf S34_30",
       "type": "http",
-      "server": "158.220.93.104",
-      "server_port": 3128
+      "server": "13.40.94.69",
+      "server_port": 9002
     },
     {
-      "tag": "🇭🇰 claude tg nf grok tw S40_28",
-      "type": "vmess",
-      "server": "47.83.207.148",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "cipher": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "VAH4URdZL3jDX5r2.v.3dns.vip",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "HOST": "VAH4URdZL3jDX5r2.v.3dns.vip"
-        }
-      }
+      "tag": "🇬🇧 grok S32_31",
+      "type": "http",
+      "server": "35.177.65.228",
+      "server_port": 29158
     },
     {
-      "tag": "🇭🇰 claude yt grok gpt tg nf fb S44_29",
-      "type": "vmess",
-      "server": "43.198.204.35",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "cipher": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "ce0gedpxwou6cqon.v.3dns.vip",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "HOST": "ce0gedpxwou6cqon.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "tag": "🇭🇰 claude gpt grok yt tw fb nf tg S46_30",
-      "type": "vmess",
-      "server": "47.86.107.119",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "cipher": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "lcv8v9l7OyamxxfZ.v.3dns.vip",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "HOST": "lcv8v9l7OyamxxfZ.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "tag": "🇭🇰 claude gpt nf S48_31",
-      "type": "vmess",
-      "server": "v10.zgtfqs.click",
-      "server_port": 30807,
-      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
-      "alter_id": 2,
-      "cipher": "auto"
-    },
-    {
-      "tag": "🇭🇰 claude gpt grok yt tw fb nf tg S46_32",
-      "type": "vmess",
-      "server": "lcv8v9l7oyamxxfz.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "cipher": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "lcv8v9l7OyamxxfZ.v.3dns.vip",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "HOST": "lcv8v9l7OyamxxfZ.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "tag": "🇭🇰 grok claude gpt tw fb yt nf tg S46_33",
-      "type": "vmess",
-      "server": "u2frxj0g13vdi0wo.v.3dns.vip",
-      "server_port": 443,
-      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
-      "cipher": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "U2FRxj0G13vDI0Wo.v.3dns.vip",
-        "insecure": true
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ws-vmess",
-        "headers": {
-          "HOST": "U2FRxj0G13vDI0Wo.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "tag": "🇭🇰 claude gpt nf S48_34",
+      "tag": "🇭🇰 claude nf gpt tg fb yt S54_32",
       "type": "vmess",
       "server": "v10.hdacd.com",
       "server_port": 30807,
@@ -318,7 +226,7 @@
       "cipher": "auto"
     },
     {
-      "tag": "🇭🇰 tg S32_35",
+      "tag": "🇭🇰 claude grok yt tw gpt nf tg fb S46_33",
       "type": "vmess",
       "server": "8.218.184.4",
       "server_port": 443,
@@ -338,7 +246,96 @@
       }
     },
     {
-      "tag": "🇭🇰 claude grok gpt yt tw fb nf tg S46_36",
+      "tag": "🇭🇰 gpt claude nf tg yt S52_34",
+      "type": "vmess",
+      "server": "v10.zgtfqs.click",
+      "server_port": 30807,
+      "uuid": "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+      "alter_id": 2,
+      "cipher": "auto"
+    },
+    {
+      "tag": "🇭🇰 gpt grok claude tg fb nf tw yt S46_35",
+      "type": "vmess",
+      "server": "43.198.204.35",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "ce0gedpxwou6cqon.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "ce0gedpxwou6cqon.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 claude nf fb yt tw gpt grok tg S46_36",
+      "type": "vmess",
+      "server": "u2frxj0g13vdi0wo.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "U2FRxj0G13vDI0Wo.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "U2FRxj0G13vDI0Wo.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 yt tg gpt S36_37",
+      "type": "vmess",
+      "server": "47.86.107.119",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "lcv8v9l7OyamxxfZ.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "lcv8v9l7OyamxxfZ.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 claude tg tw gpt S38_38",
+      "type": "vmess",
+      "server": "47.83.207.148",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "VAH4URdZL3jDX5r2.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "VAH4URdZL3jDX5r2.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 yt grok claude nf gpt tw S42_39",
       "type": "vmess",
       "server": "m01c7b2z26dtqgee.v.3dns.vip",
       "server_port": 443,
@@ -358,85 +355,147 @@
       }
     },
     {
-      "tag": "🇭🇰 tg gpt claude nf grok tw yt fb S58_37",
+      "tag": "🇭🇰 tg S32_40",
+      "type": "vmess",
+      "server": "n1747624260.4u9ma.icu",
+      "server_port": 443,
+      "uuid": "eee8cb72-7eab-4034-a308-ed06cb07e003",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "n1747624260.4u9ma.icu",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "HOST": "n1747624260.4u9ma.icu"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 grok claude S34_41",
+      "type": "vmess",
+      "server": "lcv8v9l7oyamxxfz.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "lcv8v9l7OyamxxfZ.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "lcv8v9l7OyamxxfZ.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 nf claude tw tg grok fb gpt yt S46_42",
+      "type": "vmess",
+      "server": "nycqg19zkwacpm1b.v.3dns.vip",
+      "server_port": 443,
+      "uuid": "f23bb427-c1f9-4373-876c-2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "NYcQg19zkwaCPM1B.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "NYcQg19zkwaCPM1B.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇭🇰 gpt tg claude nf grok yt tw fb S58_43",
       "type": "http",
       "server": "103.211.103.170",
       "server_port": 3128
     },
     {
-      "tag": "🇭🇰 gpt claude fb nf tw yt tg grok S46_38",
+      "tag": "🇭🇰 gpt nf grok fb yt claude S42_44",
       "type": "socks",
       "server": "103.117.121.56",
       "server_port": 1080
     },
     {
-      "tag": "🇭🇰 claude gpt yt tw fb nf grok tg S46_39",
+      "tag": "🇭🇰 gpt yt nf tw fb S40_45",
       "type": "socks",
       "server": "152.32.168.221",
       "server_port": 10808
     },
     {
-      "tag": "🇭🇰 gpt claude tw fb grok yt tg nf S58_40",
+      "tag": "🇮🇩 nf tg S34_46",
+      "type": "http",
+      "server": "15.232.45.244",
+      "server_port": 1111
+    },
+    {
+      "tag": "🇮🇳 yt claude S34_47",
+      "type": "http",
+      "server": "3.111.49.148",
+      "server_port": 47357
+    },
+    {
+      "tag": "🇯🇵 nf grok yt gpt tg claude S54_48",
+      "type": "vmess",
+      "server": "210.138.37.53",
+      "server_port": 443,
+      "uuid": "f23bb427c1f94373876c2f43e9f790f3",
+      "cipher": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "DrBKg16eGf3FZlM3.v.3dns.vip",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws-vmess",
+        "headers": {
+          "HOST": "DrBKg16eGf3FZlM3.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "🇰🇭 claude nf S46_49",
       "type": "socks",
-      "server": "103.210.161.8",
+      "server": "103.206.68.241",
       "server_port": 1080
     },
     {
-      "tag": "🇮🇩 claude nf fb S48_41",
-      "type": "http",
-      "server": "160.19.146.123",
-      "server_port": 2022
-    },
-    {
-      "tag": "🇮🇹 claude nf S46_42",
-      "type": "http",
-      "server": "87.26.138.254",
-      "server_port": 7768
-    },
-    {
-      "tag": "🇯🇵 gpt S32_43",
+      "tag": "🇰🇭 tw gpt grok yt tg fb S51_50",
       "type": "socks",
-      "server": "35.77.119.146",
+      "server": "220.158.232.118",
       "server_port": 1080
     },
     {
-      "tag": "🇰🇷 tw tg grok S36_44",
-      "type": "http",
-      "server": "13.209.65.136",
-      "server_port": 21947
+      "tag": "🇰🇭 gpt grok S46_51",
+      "type": "socks",
+      "server": "103.197.242.95",
+      "server_port": 1080
     },
     {
-      "tag": "🇲🇾 nf S32_45",
+      "tag": "🇲🇽 tg S44_52",
       "type": "http",
-      "server": "43.216.181.42",
-      "server_port": 45658
+      "server": "78.14.15.193",
+      "server_port": 44859
     },
     {
-      "tag": "🇲🇾 gpt claude grok fb tw yt nf tg S46_46",
+      "tag": "🇲🇾 gpt grok claude fb tw yt tg nf S46_53",
       "type": "socks",
       "server": "47.250.211.53",
       "server_port": 1080
     },
     {
-      "tag": "🇳🇱 yt S44_47",
-      "type": "socks",
-      "server": "5.253.59.150",
-      "server_port": 1082
-    },
-    {
-      "tag": "🇳🇱 claude nf grok fb gpt tg tw yt S46_48",
-      "type": "socks",
-      "server": "161.35.90.93",
-      "server_port": 1082
-    },
-    {
-      "tag": "🇳🇱 claude nf tg gpt fb yt tw grok S46_49",
-      "type": "socks",
-      "server": "161.35.90.93",
-      "server_port": 1083
-    },
-    {
-      "tag": "🇷🇺 yt grok tg gpt fb tw nf claude S58_50",
+      "tag": "🇷🇺 nf fb tg gpt claude grok yt tw S58_54",
       "type": "vmess",
       "server": "renderer-stream-2-62.mirra.now",
       "server_port": 443,
@@ -452,19 +511,25 @@
       }
     },
     {
-      "tag": "🇸🇦 gpt fb grok claude tw yt nf tg S46_51",
+      "tag": "🇸🇦 gpt grok tw claude fb nf tg yt S46_55",
       "type": "http",
       "server": "130.110.103.245",
       "server_port": 3128
     },
     {
-      "tag": "🇸🇪 gpt S32_52",
+      "tag": "🇸🇪 gpt S32_56",
       "type": "http",
-      "server": "51.20.109.37",
-      "server_port": 8865
+      "server": "13.60.181.61",
+      "server_port": 3252
     },
     {
-      "tag": "🇸🇬 grok claude gpt tw fb tg nf yt S46_53",
+      "tag": "🇸🇪 nf S32_57",
+      "type": "http",
+      "server": "13.51.44.23",
+      "server_port": 8080
+    },
+    {
+      "tag": "🇸🇬 gpt grok claude fb tw yt tg nf S46_58",
       "type": "vmess",
       "server": "13.250.114.194",
       "server_port": 8443,
@@ -472,15 +537,25 @@
       "cipher": "auto"
     },
     {
-      "tag": "🇺🇸 tg gpt claude nf grok tw yt fb S46_54",
-      "type": "shadowsocks",
-      "server": "31.76.82.131",
-      "server_port": 34260,
-      "method": "chacha20-ietf-poly1305",
-      "password": "cTAObwg4OWWXkZJQs0ZdgC"
+      "tag": "🇸🇬 grok nf S34_59",
+      "type": "http",
+      "server": "13.250.38.29",
+      "server_port": 16583
     },
     {
-      "tag": "🇺🇸 gpt tw grok nf fb yt tg claude S58_55",
+      "tag": "🇸🇬 tw S32_60",
+      "type": "http",
+      "server": "52.77.229.98",
+      "server_port": 10000
+    },
+    {
+      "tag": "🇸🇬 gpt claude nf tw fb grok yt tg S58_61",
+      "type": "socks",
+      "server": "45.127.34.193",
+      "server_port": 1081
+    },
+    {
+      "tag": "🇺🇸 gpt tw grok fb nf yt tg claude S58_62",
       "type": "vmess",
       "server": "165.140.216.142",
       "server_port": 443,
@@ -488,7 +563,7 @@
       "cipher": "auto"
     },
     {
-      "tag": "🇺🇸 gpt tw fb grok nf yt tg claude S58_56",
+      "tag": "🇺🇸 gpt tw grok fb nf yt tg claude S58_63",
       "type": "vmess",
       "server": "165.140.216.141",
       "server_port": 443,
@@ -496,46 +571,40 @@
       "cipher": "auto"
     },
     {
-      "tag": "🇺🇸 claude gpt grok tw fb yt nf tg S58_57",
+      "tag": "🇺🇸 grok tw S34_64",
+      "type": "http",
+      "server": "44.204.11.88",
+      "server_port": 23394
+    },
+    {
+      "tag": "🇺🇸 gpt claude grok tw fb nf tg yt S58_65",
       "type": "http",
       "server": "199.7.149.96",
       "server_port": 3128
     },
     {
-      "tag": "🇺🇸 grok claude gpt tw fb tg nf S44_58",
+      "tag": "🇻🇪 grok S44_66",
       "type": "http",
-      "server": "131.153.187.19",
-      "server_port": 8001
+      "server": "190.97.241.106",
+      "server_port": 999
     },
     {
-      "tag": "🇺🇸 gpt yt tw fb tg grok S42_59",
+      "tag": "🇻🇳 gpt grok yt tg claude fb tw nf S46_67",
+      "type": "http",
+      "server": "36.50.135.41",
+      "server_port": 443
+    },
+    {
+      "tag": "🇻🇳 yt claude grok tg fb nf S54_68",
       "type": "socks",
-      "server": "85.209.156.148",
-      "server_port": 1080
+      "server": "14.225.204.32",
+      "server_port": 10800
     },
     {
-      "tag": "🇺🇸 gpt claude fb tw nf grok yt tg S46_60",
-      "type": "socks",
-      "server": "94.183.233.251",
-      "server_port": 1080
-    },
-    {
-      "tag": "🇻🇳 gpt yt tw grok S50_61",
+      "tag": "🇿🇦 claude S32_69",
       "type": "http",
-      "server": "210.211.113.33",
-      "server_port": 80
-    },
-    {
-      "tag": "🇻🇳 gpt nf S46_62",
-      "type": "http",
-      "server": "210.211.113.35",
-      "server_port": 80
-    },
-    {
-      "tag": "🇿🇦 grok tg S34_63",
-      "type": "http",
-      "server": "13.245.161.189",
-      "server_port": 9443
+      "server": "16.28.66.143",
+      "server_port": 8080
     }
   ]
 }
