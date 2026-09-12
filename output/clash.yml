@@ -29,14 +29,13 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-  - {"name":"🇩🇪 tg yt tw gpt claude grok fb nf S58_01","server":"64.188.106.254","type":"vmess","country":"🇩🇪","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
-  - {"name":"🇩🇪 nf gpt grok tw tg fb yt claude S46_02","server":"111.88.74.167","type":"vmess","country":"🇩🇪","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
-  - {"name":"🇩🇪 gpt nf tg claude yt fb grok tw S46_03","server":"31.77.223.21","type":"vmess","country":"🇩🇪","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
-  - {"name":"🇷🇺 nf tg grok fb S38_04","server":"5.188.26.85","type":"vmess","country":"🇷🇺","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
-  - {"name":"🇷🇺 tw S41_05","server":"62.182.138.3","type":"socks5","country":"🇷🇺","port":2080,"udp":true}
-  - {"name":"🇺🇸 gpt fb tw nf yt tg S42_06","server":"3.223.136.70","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
-  - {"name":"🇺🇸 nf gpt S46_07","server":"38.58.182.147","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
-  - {"name":"🇺🇸 gpt claude nf grok tw fb yt tg S46_08","server":"144.172.106.172","type":"socks5","country":"🇺🇸","port":1081,"udp":true}
+  - {"name":"🇩🇪 claude gpt tg yt nf fb tw grok S46_01","server":"31.77.223.21","type":"vmess","country":"🇩🇪","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
+  - {"name":"🇩🇪 tg claude gpt tw yt fb nf grok S46_02","server":"111.88.74.167","type":"vmess","country":"🇩🇪","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
+  - {"name":"🇫🇷 gpt tg fb yt claude grok nf tw S46_03","server":"161.97.114.197","type":"socks5","country":"🇫🇷","port":1080,"udp":true}
+  - {"name":"🇮🇳 fb tg gpt claude grok tw yt nf S46_04","server":"142.93.211.50","type":"http","country":"🇮🇳","port":3128,"skip-cert-verify":true}
+  - {"name":"🇰🇭 yt tg gpt S45_05","server":"220.158.232.118","type":"socks5","country":"🇰🇭","port":1080,"udp":true}
+  - {"name":"🇷🇺 gpt yt fb grok nf tg tw claude S46_06","server":"5.188.26.85","type":"vmess","country":"🇷🇺","port":443,"uuid":"db50a20e-7ff5-4e70-948f-17cc9ca7c154","alterId":0,"cipher":"auto","network":"ws","servername":"renderer-stream-2-62.mirra.now","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/api/v1/gpu-stream/socket","headers":{"HOST":"renderer-stream-2-62.mirra.now"}}}
+  - {"name":"🇺🇸 gpt tw tg fb S38_07","server":"3.223.136.70","type":"socks5","country":"🇺🇸","port":1080,"udp":true}
 
 proxy-groups:
   - name: "🚀 节点选择"
@@ -44,81 +43,75 @@ proxy-groups:
     proxies:
       - "♻️ 自动选择"
       - DIRECT
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "♻️ 自动选择"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "🌍 国外媒体"
     type: select
     proxies:
       - "🚀 节点选择"
       - "♻️ 自动选择"
       - "🎯 全球直连"
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "📲 电报信息"
     type: select
     proxies:
       - "🚀 节点选择"
       - "🎯 全球直连"
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "Ⓜ️ 微软服务"
     type: select
     proxies:
       - "🎯 全球直连"
       - "🚀 节点选择"
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "🍎 苹果服务"
     type: select
     proxies:
       - "🚀 节点选择"
       - "🎯 全球直连"
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
   - name: "🎯 全球直连"
     type: select
     proxies:
@@ -141,14 +134,13 @@ proxy-groups:
       - "🚀 节点选择"
       - "🎯 全球直连"
       - "♻️ 自动选择"
-      - "🇩🇪 tg yt tw gpt claude grok fb nf S58_01"
-      - "🇩🇪 nf gpt grok tw tg fb yt claude S46_02"
-      - "🇩🇪 gpt nf tg claude yt fb grok tw S46_03"
-      - "🇷🇺 nf tg grok fb S38_04"
-      - "🇷🇺 tw S41_05"
-      - "🇺🇸 gpt fb tw nf yt tg S42_06"
-      - "🇺🇸 nf gpt S46_07"
-      - "🇺🇸 gpt claude nf grok tw fb yt tg S46_08"
+      - "🇩🇪 claude gpt tg yt nf fb tw grok S46_01"
+      - "🇩🇪 tg claude gpt tw yt fb nf grok S46_02"
+      - "🇫🇷 gpt tg fb yt claude grok nf tw S46_03"
+      - "🇮🇳 fb tg gpt claude grok tw yt nf S46_04"
+      - "🇰🇭 yt tg gpt S45_05"
+      - "🇷🇺 gpt yt fb grok nf tg tw claude S46_06"
+      - "🇺🇸 gpt tw tg fb S38_07"
 
 rule-providers:
   LocalAreaNetwork:
