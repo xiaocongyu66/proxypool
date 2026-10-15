@@ -1,45 +1,72 @@
 {
   "nodes": [
     {
-      "name": "🌐 tg gpt claude fb yt tw grok S44_01",
+      "name": "🌐 tg nf claude grok yt S40_01",
       "type": "ss",
+      "country": "",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 40,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tg",
+        "nf",
+        "claude",
+        "grok",
+        "yt"
+      ]
+    },
+    {
+      "name": "🌐 claude nf fb S36_02",
+      "type": "vmess",
+      "country": "",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "nf",
+        "fb"
+      ]
+    },
+    {
+      "name": "🌐 claude tw nf yt tg S40_03",
+      "type": "vmess",
+      "country": "",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 40,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "tw",
+        "nf",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🌐 grok claude gpt tw fb yt tg S44_04",
+      "type": "http",
       "country": "",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "tg",
-        "gpt",
-        "claude",
-        "fb",
-        "yt",
-        "tw",
-        "grok"
-      ]
-    },
-    {
-      "name": "🌐 tg gpt claude nf grok yt fb tw S46_02",
-      "type": "ss",
-      "country": "",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "tg",
-        "gpt",
-        "claude",
-        "nf",
         "grok",
-        "yt",
+        "claude",
+        "gpt",
+        "tw",
         "fb",
-        "tw"
+        "yt",
+        "tg"
       ]
     },
     {
-      "name": "🌐 claude gpt grok tw fb yt tg S44_03",
-      "type": "vmess",
+      "name": "🌐 claude gpt grok tw fb yt tg S44_05",
+      "type": "http",
       "country": "",
       "speed_mbps": 0,
       "delay_ms": 1000,
@@ -56,7 +83,7 @@
       ]
     },
     {
-      "name": "🇦🇷 gpt claude yt nf fb grok tw tg S58_04",
+      "name": "🇦🇷 gpt claude yt fb grok nf tw tg S58_06",
       "type": "http",
       "country": "🇦🇷",
       "speed_mbps": 0,
@@ -67,86 +94,52 @@
         "gpt",
         "claude",
         "yt",
-        "nf",
         "fb",
         "grok",
+        "nf",
         "tw",
         "tg"
       ]
     },
     {
-      "name": "🇧🇩 gpt S44_05",
-      "type": "socks5",
-      "country": "🇧🇩",
+      "name": "🇦🇺 grok claude gpt fb tw yt tg S44_07",
+      "type": "http",
+      "country": "🇦🇺",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 44,
-      "ip_type": "residential",
+      "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇧🇩 claude yt tg S48_06",
-      "type": "socks5",
-      "country": "🇧🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
-      "accessible_sites": [
+        "grok",
         "claude",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇧🇩 tw grok yt S48_07",
-      "type": "socks5",
-      "country": "🇧🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tw",
-        "grok",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇧🇩 grok yt gpt tw S50_08",
-      "type": "socks5",
-      "country": "🇧🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 50,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "grok",
-        "yt",
         "gpt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇧🇷 yt grok tw fb tg S52_09",
-      "type": "http",
-      "country": "🇧🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 52,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "yt",
-        "grok",
-        "tw",
         "fb",
+        "tw",
+        "yt",
         "tg"
       ]
     },
     {
-      "name": "🇧🇷 claude gpt grok nf fb tw yt tg S58_10",
+      "name": "🇧🇪 tg gpt nf claude fb yt tw grok S58_08",
+      "type": "http",
+      "country": "🇧🇪",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "tg",
+        "gpt",
+        "nf",
+        "claude",
+        "fb",
+        "yt",
+        "tw",
+        "grok"
+      ]
+    },
+    {
+      "name": "🇧🇷 gpt claude grok nf yt tw tg fb S58_09",
       "type": "http",
       "country": "🇧🇷",
       "speed_mbps": 0,
@@ -154,18 +147,36 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
         "gpt",
+        "claude",
         "grok",
         "nf",
-        "fb",
-        "tw",
         "yt",
-        "tg"
+        "tw",
+        "tg",
+        "fb"
       ]
     },
     {
-      "name": "🇧🇼 gpt claude fb tw yt tg grok S56_11",
+      "name": "🇧🇷 fb tg gpt grok yt tw claude S56_10",
+      "type": "http",
+      "country": "🇧🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "fb",
+        "tg",
+        "gpt",
+        "grok",
+        "yt",
+        "tw",
+        "claude"
+      ]
+    },
+    {
+      "name": "🇧🇼 claude gpt fb tw tg yt grok S56_11",
       "type": "http",
       "country": "🇧🇼",
       "speed_mbps": 0,
@@ -173,47 +184,30 @@
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
         "claude",
+        "gpt",
         "fb",
         "tw",
-        "yt",
         "tg",
+        "yt",
         "grok"
       ]
     },
     {
-      "name": "🇨🇦 gpt claude grok fb yt tg tw S44_12",
+      "name": "🇨🇦 tg yt S34_12",
       "type": "trojan",
       "country": "🇨🇦",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 34,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "fb",
-        "yt",
         "tg",
-        "tw"
+        "yt"
       ]
     },
     {
-      "name": "🇨🇦 claude S32_13",
-      "type": "http",
-      "country": "🇨🇦",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇦 fb gpt yt tw claude grok S54_14",
+      "name": "🇨🇦 claude fb gpt tw yt grok S54_13",
       "type": "http",
       "country": "🇨🇦",
       "speed_mbps": 0,
@@ -221,28 +215,16 @@
       "quality_score": 54,
       "ip_type": "residential",
       "accessible_sites": [
+        "claude",
         "fb",
         "gpt",
-        "yt",
         "tw",
-        "claude",
+        "yt",
         "grok"
       ]
     },
     {
-      "name": "🇨🇦 tw S32_15",
-      "type": "socks5",
-      "country": "🇨🇦",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇬 gpt claude fb grok tg tw yt S56_16",
+      "name": "🇨🇬 claude gpt fb tg grok yt tw S56_14",
       "type": "http",
       "country": "🇨🇬",
       "speed_mbps": 0,
@@ -250,163 +232,19 @@
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
         "claude",
+        "gpt",
         "fb",
-        "grok",
         "tg",
-        "tw",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb claude gpt tw tg yt grok S53_17",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "tw",
-        "tg",
-        "yt",
-        "grok"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb gpt claude yt grok tg tw S53_18",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "gpt",
-        "claude",
-        "yt",
         "grok",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb claude gpt yt tw grok nf tg S55_19",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 55,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "yt",
-        "tw",
-        "grok",
-        "nf",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb claude gpt grok tg yt tw S53_20",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "grok",
-        "tg",
         "yt",
         "tw"
       ]
     },
     {
-      "name": "🇨🇲 fb claude gpt yt grok tg tw S53_21",
+      "name": "🇨🇱 grok S44_15",
       "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "yt",
-        "grok",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇲 claude gpt grok tg tw S49_22",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 49,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "grok",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb gpt claude grok tw tg yt S53_23",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "tg",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb claude gpt grok nf tg yt tw S55_24",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 55,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "grok",
-        "nf",
-        "tg",
-        "yt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇲 grok S44_25",
-      "type": "http",
-      "country": "🇨🇲",
+      "country": "🇨🇱",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 44,
@@ -416,7 +254,7 @@
       ]
     },
     {
-      "name": "🇨🇲 fb gpt claude yt grok tg tw S53_26",
+      "name": "🇨🇲 fb gpt claude grok tg yt tw S53_16",
       "type": "http",
       "country": "🇨🇲",
       "speed_mbps": 0,
@@ -427,234 +265,167 @@
         "fb",
         "gpt",
         "claude",
-        "yt",
         "grok",
         "tg",
+        "yt",
         "tw"
       ]
     },
     {
-      "name": "🇨🇲 fb claude gpt yt grok tg tw S53_27",
+      "name": "🇨🇲 tw S41_17",
       "type": "http",
       "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "claude",
-        "gpt",
-        "yt",
-        "grok",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇲 fb gpt claude tw grok tg yt S53_28",
-      "type": "http",
-      "country": "🇨🇲",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "fb",
-        "gpt",
-        "claude",
-        "tw",
-        "grok",
-        "tg",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_29",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude nf S46_30",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "nf"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_31",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_32",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 nf claude S46_33",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "nf",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S41_34",
-      "type": "http",
-      "country": "🇨🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 41,
       "ip_type": "mobile",
       "accessible_sites": [
-        "claude"
+        "tw"
       ]
     },
     {
-      "name": "🇨🇳 claude S44_35",
+      "name": "🇨🇲 fb S41_18",
       "type": "http",
-      "country": "🇨🇳",
+      "country": "🇨🇲",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
+      "quality_score": 41,
+      "ip_type": "mobile",
       "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_36",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_37",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_38",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 nf claude S46_39",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "nf",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 tw claude yt nf fb S40_40",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 40,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "tw",
-        "claude",
-        "yt",
-        "nf",
         "fb"
       ]
     },
     {
-      "name": "🇨🇳 claude tw fb yt nf S40_41",
+      "name": "🇨🇲 fb gpt claude grok tw yt tg S53_19",
       "type": "http",
-      "country": "🇨🇳",
+      "country": "🇨🇲",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 40,
-      "ip_type": "datacenter",
+      "quality_score": 53,
+      "ip_type": "mobile",
       "accessible_sites": [
-        "claude",
-        "tw",
         "fb",
+        "gpt",
+        "claude",
+        "grok",
+        "tw",
         "yt",
-        "nf"
+        "tg"
       ]
     },
     {
-      "name": "🇨🇳 gpt yt nf tw tg grok S42_42",
+      "name": "🇨🇲 fb gpt claude grok nf tg yt S53_20",
+      "type": "http",
+      "country": "🇨🇲",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 53,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "fb",
+        "gpt",
+        "claude",
+        "grok",
+        "nf",
+        "tg",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇨🇳 tw claude S43_21",
       "type": "http",
       "country": "🇨🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 42,
-      "ip_type": "datacenter",
+      "quality_score": 43,
+      "ip_type": "mobile",
       "accessible_sites": [
-        "gpt",
+        "tw",
+        "claude"
+      ]
+    },
+    {
+      "name": "🇨🇳 fb yt nf claude tg grok S51_22",
+      "type": "http",
+      "country": "🇨🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 51,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "fb",
         "yt",
         "nf",
-        "tw",
+        "claude",
         "tg",
         "grok"
       ]
     },
     {
-      "name": "🇨🇳 fb yt tw claude S38_43",
+      "name": "🇨🇳 claude S44_23",
+      "type": "http",
+      "country": "🇨🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude"
+      ]
+    },
+    {
+      "name": "🇨🇳 yt claude grok gpt tw nf tg fb S55_24",
+      "type": "http",
+      "country": "🇨🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 55,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "yt",
+        "claude",
+        "grok",
+        "gpt",
+        "tw",
+        "nf",
+        "tg",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇨🇳 claude fb gpt tg nf tw grok S44_25",
+      "type": "http",
+      "country": "🇨🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "fb",
+        "gpt",
+        "tg",
+        "nf",
+        "tw",
+        "grok"
+      ]
+    },
+    {
+      "name": "🇨🇳 claude tw yt S36_26",
+      "type": "http",
+      "country": "🇨🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "tw",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇨🇳 yt tw fb claude S38_27",
       "type": "http",
       "country": "🇨🇳",
       "speed_mbps": 0,
@@ -662,77 +433,14 @@
       "quality_score": 38,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "fb",
         "yt",
         "tw",
+        "fb",
         "claude"
       ]
     },
     {
-      "name": "🇨🇳 claude tw S46_44",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇨🇳 gpt claude tw fb grok nf yt tg S55_45",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 55,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "tw",
-        "fb",
-        "grok",
-        "nf",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇨🇳 gpt claude fb tw nf yt grok tg S55_46",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 55,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "fb",
-        "tw",
-        "nf",
-        "yt",
-        "grok",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_47",
-      "type": "http",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇨🇳 gpt claude tg fb tw yt grok S53_48",
+      "name": "🇨🇳 fb grok claude yt tw tg gpt S53_28",
       "type": "http",
       "country": "🇨🇳",
       "speed_mbps": 0,
@@ -740,29 +448,36 @@
       "quality_score": 53,
       "ip_type": "mobile",
       "accessible_sites": [
-        "gpt",
-        "claude",
-        "tg",
         "fb",
-        "tw",
+        "grok",
+        "claude",
         "yt",
-        "grok"
+        "tw",
+        "tg",
+        "gpt"
       ]
     },
     {
-      "name": "🇨🇳 claude S44_49",
-      "type": "http",
+      "name": "🇨🇳 gpt claude fb yt tw nf grok tg S58_29",
+      "type": "socks5",
       "country": "🇨🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude"
+        "gpt",
+        "claude",
+        "fb",
+        "yt",
+        "tw",
+        "nf",
+        "grok",
+        "tg"
       ]
     },
     {
-      "name": "🇨🇳 nf S41_50",
+      "name": "🇨🇳 claude S41_30",
       "type": "socks5",
       "country": "🇨🇳",
       "speed_mbps": 0,
@@ -770,78 +485,48 @@
       "quality_score": 41,
       "ip_type": "mobile",
       "accessible_sites": [
-        "nf"
-      ]
-    },
-    {
-      "name": "🇨🇳 gpt claude yt fb tw grok nf tg S58_51",
-      "type": "socks5",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "yt",
-        "fb",
-        "tw",
-        "grok",
-        "nf",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇨🇳 claude S44_52",
-      "type": "socks5",
-      "country": "🇨🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
         "claude"
       ]
     },
     {
-      "name": "🇨🇿 gpt yt claude tw fb grok tg S56_53",
+      "name": "🇨🇴 gpt claude grok fb tg tw yt S56_31",
       "type": "http",
-      "country": "🇨🇿",
+      "country": "🇨🇴",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
         "gpt",
-        "yt",
         "claude",
-        "tw",
-        "fb",
         "grok",
-        "tg"
+        "fb",
+        "tg",
+        "tw",
+        "yt"
       ]
     },
     {
-      "name": "🇩🇪 claude gpt tg grok fb yt tw S56_54",
+      "name": "🇩🇪 tg gpt claude nf grok fb tw yt S46_32",
       "type": "http",
       "country": "🇩🇪",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
+      "quality_score": 46,
+      "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
-        "gpt",
         "tg",
+        "gpt",
+        "claude",
+        "nf",
         "grok",
         "fb",
-        "yt",
-        "tw"
+        "tw",
+        "yt"
       ]
     },
     {
-      "name": "🇩🇪 gpt tg claude grok fb tw nf yt S58_55",
+      "name": "🇩🇪 tg claude fb gpt nf grok yt tw S58_33",
       "type": "http",
       "country": "🇩🇪",
       "speed_mbps": 0,
@@ -849,54 +534,36 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
         "tg",
         "claude",
+        "fb",
+        "gpt",
+        "nf",
+        "grok",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇩🇪 gpt claude tg grok fb tw yt S44_34",
+      "type": "http",
+      "country": "🇩🇪",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tg",
         "grok",
         "fb",
         "tw",
-        "nf",
         "yt"
       ]
     },
     {
-      "name": "🇩🇪 tg claude grok gpt yt fb tw S44_56",
-      "type": "http",
-      "country": "🇩🇪",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "tg",
-        "claude",
-        "grok",
-        "gpt",
-        "yt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇩🇪 gpt grok claude tg yt fb tw S44_57",
-      "type": "http",
-      "country": "🇩🇪",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "grok",
-        "claude",
-        "tg",
-        "yt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇩🇪 gpt claude tg nf yt fb grok tw S46_58",
+      "name": "🇩🇪 gpt tg claude nf fb grok tw yt S46_35",
       "type": "http",
       "country": "🇩🇪",
       "speed_mbps": 0,
@@ -905,17 +572,17 @@
       "ip_type": "datacenter",
       "accessible_sites": [
         "gpt",
-        "claude",
         "tg",
+        "claude",
         "nf",
-        "yt",
         "fb",
         "grok",
-        "tw"
+        "tw",
+        "yt"
       ]
     },
     {
-      "name": "🇩🇪 gpt tg grok claude yt fb tw S44_59",
+      "name": "🇩🇪 tg gpt grok claude fb yt tw S44_36",
       "type": "http",
       "country": "🇩🇪",
       "speed_mbps": 0,
@@ -923,107 +590,111 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt",
         "tg",
+        "gpt",
         "grok",
         "claude",
-        "yt",
         "fb",
+        "yt",
         "tw"
       ]
     },
     {
-      "name": "🇩🇪 nf claude gpt fb yt grok tg tw S46_60",
+      "name": "🇩🇪 claude gpt tg fb tw grok yt S56_37",
+      "type": "http",
+      "country": "🇩🇪",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "tg",
+        "fb",
+        "tw",
+        "grok",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇩🇪 yt S32_38",
       "type": "socks5",
       "country": "🇩🇪",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 32,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "nf",
-        "claude",
-        "gpt",
-        "fb",
-        "yt",
-        "grok",
-        "tg",
-        "tw"
+        "yt"
       ]
     },
     {
-      "name": "🇪🇨 gpt S44_61",
+      "name": "🇩🇪 gpt nf tg fb tw yt grok S44_39",
+      "type": "socks5",
+      "country": "🇩🇪",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "nf",
+        "tg",
+        "fb",
+        "tw",
+        "yt",
+        "grok"
+      ]
+    },
+    {
+      "name": "🇩🇴 fb S44_40",
       "type": "http",
-      "country": "🇪🇨",
+      "country": "🇩🇴",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 44,
       "ip_type": "residential",
       "accessible_sites": [
-        "gpt"
+        "fb"
       ]
     },
     {
-      "name": "🇪🇨 gpt tw S46_62",
-      "type": "http",
-      "country": "🇪🇨",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇪🇬 fb gpt nf tg yt tw S54_63",
+      "name": "🇪🇬 gpt tg fb tw yt S52_41",
       "type": "http",
       "country": "🇪🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 54,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb",
-        "gpt",
-        "nf",
-        "tg",
-        "yt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇪🇸 fb tg S46_64",
-      "type": "http",
-      "country": "🇪🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇪🇸 gpt claude fb grok tw S52_65",
-      "type": "http",
-      "country": "🇪🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 52,
       "ip_type": "residential",
       "accessible_sites": [
         "gpt",
-        "claude",
+        "tg",
         "fb",
-        "grok",
-        "tw"
+        "tw",
+        "yt"
       ]
     },
     {
-      "name": "🇫🇮 claude gpt grok tg fb yt tw S44_66",
+      "name": "🇪🇸 gpt claude grok tg fb tw yt S56_42",
+      "type": "http",
+      "country": "🇪🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "grok",
+        "tg",
+        "fb",
+        "tw",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇫🇮 claude gpt grok tg fb yt tw S44_43",
       "type": "http",
       "country": "🇫🇮",
       "speed_mbps": 0,
@@ -1041,94 +712,37 @@
       ]
     },
     {
-      "name": "🇫🇮 yt gpt S34_67",
-      "type": "http",
-      "country": "🇫🇮",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 34,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "yt",
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇫🇮 fb claude S46_68",
+      "name": "🇫🇮 nf S32_44",
       "type": "socks5",
       "country": "🇫🇮",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇫🇷 claude tg gpt grok tw yt fb S56_69",
-      "type": "http",
-      "country": "🇫🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "tg",
-        "gpt",
-        "grok",
-        "tw",
-        "yt",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇫🇷 fb S32_70",
-      "type": "http",
-      "country": "🇫🇷",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 32,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "fb"
+        "nf"
       ]
     },
     {
-      "name": "🇫🇷 gpt fb S34_71",
-      "type": "http",
-      "country": "🇫🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 34,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇫🇷 claude grok gpt fb tg yt tw S56_72",
-      "type": "http",
-      "country": "🇫🇷",
+      "name": "🇫🇮 claude fb gpt tg yt grok tw S56_45",
+      "type": "socks5",
+      "country": "🇫🇮",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
         "claude",
-        "grok",
-        "gpt",
         "fb",
+        "gpt",
         "tg",
         "yt",
+        "grok",
         "tw"
       ]
     },
     {
-      "name": "🇫🇷 grok tg claude yt nf fb gpt tw S46_73",
+      "name": "🇫🇷 claude grok tg gpt nf tw fb yt S46_46",
       "type": "http",
       "country": "🇫🇷",
       "speed_mbps": 0,
@@ -1136,18 +750,18 @@
       "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
+        "claude",
         "grok",
         "tg",
-        "claude",
-        "yt",
+        "gpt",
         "nf",
+        "tw",
         "fb",
-        "gpt",
-        "tw"
+        "yt"
       ]
     },
     {
-      "name": "🇫🇷 claude grok tg gpt yt fb tw S44_74",
+      "name": "🇫🇷 gpt claude tg grok fb yt tw S44_47",
       "type": "http",
       "country": "🇫🇷",
       "speed_mbps": 0,
@@ -1155,35 +769,17 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
-        "grok",
-        "tg",
         "gpt",
-        "yt",
+        "claude",
+        "tg",
+        "grok",
         "fb",
+        "yt",
         "tw"
       ]
     },
     {
-      "name": "🇫🇷 grok gpt claude tg yt fb tw S44_75",
-      "type": "http",
-      "country": "🇫🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "grok",
-        "gpt",
-        "claude",
-        "tg",
-        "yt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇫🇷 grok claude tg gpt nf yt fb tw S46_76",
+      "name": "🇫🇷 tg claude grok gpt nf fb yt tw S46_48",
       "type": "http",
       "country": "🇫🇷",
       "speed_mbps": 0,
@@ -1191,18 +787,89 @@
       "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "grok",
-        "claude",
         "tg",
+        "claude",
+        "grok",
         "gpt",
         "nf",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇫🇷 grok tg claude gpt tw fb yt S44_49",
+      "type": "http",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "tg",
+        "claude",
+        "gpt",
+        "tw",
+        "fb",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇫🇷 claude grok tg gpt fb tw yt S44_50",
+      "type": "http",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "grok",
+        "tg",
+        "gpt",
+        "fb",
+        "tw",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇫🇷 grok gpt claude tg yt fb tw S44_51",
+      "type": "http",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "claude",
+        "tg",
         "yt",
         "fb",
         "tw"
       ]
     },
     {
-      "name": "🇫🇷 claude grok gpt tg yt tw fb S44_77",
+      "name": "🇫🇷 gpt claude tg fb yt tw S54_52",
+      "type": "http",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 54,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tg",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇫🇷 claude grok gpt tg fb yt tw S44_53",
       "type": "http",
       "country": "🇫🇷",
       "speed_mbps": 0,
@@ -1214,31 +881,43 @@
         "grok",
         "gpt",
         "tg",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇫🇷 yt S44_54",
+      "type": "http",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "yt"
+      ]
+    },
+    {
+      "name": "🇫🇷 tg grok gpt yt tw fb claude S44_55",
+      "type": "socks5",
+      "country": "🇫🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tg",
+        "grok",
+        "gpt",
         "yt",
         "tw",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇫🇷 grok gpt claude tg fb yt tw S44_78",
-      "type": "http",
-      "country": "🇫🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "grok",
-        "gpt",
-        "claude",
-        "tg",
         "fb",
-        "yt",
-        "tw"
+        "claude"
       ]
     },
     {
-      "name": "🇬🇧 claude gpt tg yt grok fb tw S44_79",
+      "name": "🇬🇧 claude gpt tg grok tw yt fb S44_56",
       "type": "http",
       "country": "🇬🇧",
       "speed_mbps": 0,
@@ -1249,14 +928,14 @@
         "claude",
         "gpt",
         "tg",
-        "yt",
         "grok",
-        "fb",
-        "tw"
+        "tw",
+        "yt",
+        "fb"
       ]
     },
     {
-      "name": "🇬🇧 claude gpt grok yt fb tg tw S44_80",
+      "name": "🇬🇧 grok fb yt claude gpt tg tw S44_57",
       "type": "http",
       "country": "🇬🇧",
       "speed_mbps": 0,
@@ -1264,29 +943,49 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
+        "grok",
+        "fb",
+        "yt",
         "claude",
         "gpt",
-        "grok",
-        "yt",
-        "fb",
         "tg",
         "tw"
       ]
     },
     {
-      "name": "🇭🇰 nf S32_81",
+      "name": "🇭🇰 gpt claude fb yt tw grok tg S56_58",
       "type": "http",
       "country": "🇭🇰",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
+      "quality_score": 56,
+      "ip_type": "residential",
       "accessible_sites": [
-        "nf"
+        "gpt",
+        "claude",
+        "fb",
+        "yt",
+        "tw",
+        "grok",
+        "tg"
       ]
     },
     {
-      "name": "🇭🇰 claude gpt tw yt nf grok tg fb S58_82",
+      "name": "🇭🇰 claude gpt fb S36_59",
+      "type": "http",
+      "country": "🇭🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇭🇰 gpt claude yt fb tw grok nf tg S58_60",
       "type": "http",
       "country": "🇭🇰",
       "speed_mbps": 0,
@@ -1294,19 +993,66 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
         "gpt",
-        "tw",
+        "claude",
         "yt",
-        "nf",
+        "fb",
+        "tw",
         "grok",
-        "tg",
-        "fb"
+        "nf",
+        "tg"
       ]
     },
     {
-      "name": "🇭🇰 gpt tg S34_83",
+      "name": "🇭🇰 grok gpt claude yt fb tw nf tg S46_61",
       "type": "http",
+      "country": "🇭🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 46,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "claude",
+        "yt",
+        "fb",
+        "tw",
+        "nf",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇭🇰 gpt tg yt S36_62",
+      "type": "socks5",
+      "country": "🇭🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "tg",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇭🇰 yt grok tg S36_63",
+      "type": "socks5",
+      "country": "🇭🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "yt",
+        "grok",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇭🇰 gpt grok S34_64",
+      "type": "socks5",
       "country": "🇭🇰",
       "speed_mbps": 0,
       "delay_ms": 1000,
@@ -1314,218 +1060,125 @@
       "ip_type": "datacenter",
       "accessible_sites": [
         "gpt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇭🇰 claude S32_84",
-      "type": "http",
-      "country": "🇭🇰",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇭🇰 gpt tw grok yt fb tg claude S44_85",
-      "type": "http",
-      "country": "🇭🇰",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "tw",
-        "grok",
-        "yt",
-        "fb",
-        "tg",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇭🇰 gpt claude grok tw fb yt tg S44_86",
-      "type": "http",
-      "country": "🇭🇰",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "fb",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇭🇰 nf S32_87",
-      "type": "socks5",
-      "country": "🇭🇰",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "nf"
-      ]
-    },
-    {
-      "name": "🇭🇰 fb S32_88",
-      "type": "socks5",
-      "country": "🇭🇰",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "fb"
-      ]
-    },
-    {
-      "name": "🇭🇺 fb S44_89",
-      "type": "http",
-      "country": "🇭🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb"
-      ]
-    },
-    {
-      "name": "🇮🇩 claude yt S46_90",
-      "type": "http",
-      "country": "🇮🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇮🇩 claude grok fb yt tg nf tw gpt S58_91",
-      "type": "http",
-      "country": "🇮🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "grok",
-        "fb",
-        "yt",
-        "tg",
-        "nf",
-        "tw",
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇮🇩 gpt yt S46_92",
-      "type": "http",
-      "country": "🇮🇩",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇮🇳 gpt grok claude fb tw yt tg S44_93",
-      "type": "trojan",
-      "country": "🇮🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "grok",
-        "claude",
-        "fb",
-        "tw",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇮🇳 gpt claude yt grok fb tw nf tg S58_94",
-      "type": "http",
-      "country": "🇮🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "yt",
-        "grok",
-        "fb",
-        "tw",
-        "nf",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇮🇳 grok S32_95",
-      "type": "http",
-      "country": "🇮🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
         "grok"
       ]
     },
     {
-      "name": "🇮🇳 grok yt fb tg S50_96",
-      "type": "http",
-      "country": "🇮🇳",
+      "name": "🇭🇰 claude gpt fb yt grok tw tg S56_65",
+      "type": "socks5",
+      "country": "🇭🇰",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 50,
+      "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
-        "grok",
-        "yt",
+        "claude",
+        "gpt",
         "fb",
+        "yt",
+        "grok",
+        "tw",
         "tg"
       ]
     },
     {
-      "name": "🇮🇳 gpt claude tg S45_97",
+      "name": "🇮🇩 nf S44_66",
+      "type": "http",
+      "country": "🇮🇩",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "nf"
+      ]
+    },
+    {
+      "name": "🇮🇩 gpt yt claude fb grok tg tw S56_67",
+      "type": "http",
+      "country": "🇮🇩",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "yt",
+        "claude",
+        "fb",
+        "grok",
+        "tg",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇮🇩 grok gpt fb yt tg nf claude tw S46_68",
+      "type": "socks5",
+      "country": "🇮🇩",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 46,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "fb",
+        "yt",
+        "tg",
+        "nf",
+        "claude",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇮🇱 yt S32_69",
+      "type": "http",
+      "country": "🇮🇱",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "yt"
+      ]
+    },
+    {
+      "name": "🇮🇳 gpt fb nf tw yt grok S42_70",
+      "type": "trojan",
+      "country": "🇮🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 42,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "fb",
+        "nf",
+        "tw",
+        "yt",
+        "grok"
+      ]
+    },
+    {
+      "name": "🇮🇳 claude fb yt gpt grok tw tg S56_71",
       "type": "http",
       "country": "🇮🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 45,
-      "ip_type": "mobile",
+      "quality_score": 56,
+      "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
         "claude",
+        "fb",
+        "yt",
+        "gpt",
+        "grok",
+        "tw",
         "tg"
       ]
     },
     {
-      "name": "🇮🇳 gpt tw tg S48_98",
+      "name": "🇮🇳 gpt grok tg S48_72",
       "type": "http",
       "country": "🇮🇳",
       "speed_mbps": 0,
@@ -1534,29 +1187,12 @@
       "ip_type": "residential",
       "accessible_sites": [
         "gpt",
-        "tw",
+        "grok",
         "tg"
       ]
     },
     {
-      "name": "🇮🇳 claude gpt grok fb tw yt S54_99",
-      "type": "http",
-      "country": "🇮🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 54,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "grok",
-        "fb",
-        "tw",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇮🇳 claude gpt grok fb yt tw tg S56_100",
+      "name": "🇮🇳 gpt claude grok yt fb tw tg S56_73",
       "type": "http",
       "country": "🇮🇳",
       "speed_mbps": 0,
@@ -1564,31 +1200,17 @@
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
         "gpt",
+        "claude",
         "grok",
-        "fb",
         "yt",
+        "fb",
         "tw",
         "tg"
       ]
     },
     {
-      "name": "🇮🇳 fb grok tg S36_101",
-      "type": "socks5",
-      "country": "🇮🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 36,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "fb",
-        "grok",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇮🇶 grok S44_102",
+      "name": "🇮🇶 gpt S44_74",
       "type": "socks5",
       "country": "🇮🇶",
       "speed_mbps": 0,
@@ -1596,81 +1218,35 @@
       "quality_score": 44,
       "ip_type": "residential",
       "accessible_sites": [
-        "grok"
+        "gpt"
       ]
     },
     {
-      "name": "🇮🇷 claude grok S46_103",
+      "name": "🇮🇶 gpt S44_75",
+      "type": "socks5",
+      "country": "🇮🇶",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇮🇷 gpt S44_76",
       "type": "http",
       "country": "🇮🇷",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 44,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
-        "grok"
+        "gpt"
       ]
     },
     {
-      "name": "🇮🇹 claude gpt tg grok yt nf tw fb S46_104",
-      "type": "http",
-      "country": "🇮🇹",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tg",
-        "grok",
-        "yt",
-        "nf",
-        "tw",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇮🇹 gpt claude grok tg fb nf yt tw S58_105",
-      "type": "http",
-      "country": "🇮🇹",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tg",
-        "fb",
-        "nf",
-        "yt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇮🇹 gpt yt fb tg grok claude nf tw S58_106",
-      "type": "http",
-      "country": "🇮🇹",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "yt",
-        "fb",
-        "tg",
-        "grok",
-        "claude",
-        "nf",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇮🇹 claude gpt fb tg tw yt grok S56_107",
+      "name": "🇮🇹 claude gpt tg grok tw fb yt S56_77",
       "type": "http",
       "country": "🇮🇹",
       "speed_mbps": 0,
@@ -1680,16 +1256,156 @@
       "accessible_sites": [
         "claude",
         "gpt",
-        "fb",
         "tg",
+        "grok",
         "tw",
-        "yt",
-        "grok"
+        "fb",
+        "yt"
       ]
     },
     {
-      "name": "🇯🇵 grok gpt claude fb tw yt tg S44_108",
-      "type": "trojan",
+      "name": "🇮🇹 gpt claude nf fb grok tw yt tg S58_78",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "nf",
+        "fb",
+        "grok",
+        "tw",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇮🇹 claude gpt tg grok fb tw yt S56_79",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "tg",
+        "grok",
+        "fb",
+        "tw",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇮🇹 gpt claude grok tg fb yt tw S44_80",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "grok",
+        "tg",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇮🇹 claude gpt tg grok fb yt tw S56_81",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "tg",
+        "grok",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇮🇹 gpt claude tg grok fb yt tw S56_82",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tg",
+        "grok",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇮🇹 gpt claude tg fb grok tw yt S56_83",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tg",
+        "fb",
+        "grok",
+        "tw",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇮🇹 claude nf tg grok fb gpt yt tw S58_84",
+      "type": "http",
+      "country": "🇮🇹",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "nf",
+        "tg",
+        "grok",
+        "fb",
+        "gpt",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇯🇵 tg S32_85",
+      "type": "vmess",
+      "country": "🇯🇵",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tg"
+      ]
+    },
+    {
+      "name": "🇯🇵 grok claude gpt fb yt tw tg S44_86",
+      "type": "http",
       "country": "🇯🇵",
       "speed_mbps": 0,
       "delay_ms": 1000,
@@ -1697,114 +1413,114 @@
       "ip_type": "datacenter",
       "accessible_sites": [
         "grok",
-        "gpt",
         "claude",
+        "gpt",
         "fb",
-        "tw",
         "yt",
+        "tw",
         "tg"
       ]
     },
     {
-      "name": "🇯🇵 gpt yt tg S36_109",
+      "name": "🇯🇵 claude fb gpt grok yt tw tg S44_87",
       "type": "http",
       "country": "🇯🇵",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 36,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇯🇵 claude gpt grok fb tw yt nf tg S46_110",
-      "type": "http",
-      "country": "🇯🇵",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
         "claude",
+        "fb",
         "gpt",
         "grok",
-        "fb",
+        "yt",
         "tw",
-        "yt",
-        "nf",
         "tg"
       ]
     },
     {
-      "name": "🇯🇵 gpt grok claude fb tg S40_111",
+      "name": "🇯🇵 gpt claude yt tg grok fb tw S44_88",
       "type": "socks5",
       "country": "🇯🇵",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 40,
+      "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
         "gpt",
-        "grok",
         "claude",
+        "yt",
+        "tg",
+        "grok",
         "fb",
-        "tg"
+        "tw"
       ]
     },
     {
-      "name": "🇯🇵 gpt grok tg S48_112",
-      "type": "socks5",
-      "country": "🇯🇵",
+      "name": "🇰🇬 gpt S44_89",
+      "type": "http",
+      "country": "🇰🇬",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 48,
+      "quality_score": 44,
       "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
-        "grok",
-        "tg"
+        "gpt"
       ]
     },
     {
-      "name": "🇯🇵 grok gpt claude yt fb tw nf tg S46_113",
-      "type": "socks5",
-      "country": "🇯🇵",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "grok",
-        "gpt",
-        "claude",
-        "yt",
-        "fb",
-        "tw",
-        "nf",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇰🇭 yt grok tw claude fb S49_114",
+      "name": "🇰🇭 gpt claude fb S45_90",
       "type": "socks5",
       "country": "🇰🇭",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 49,
+      "quality_score": 45,
       "ip_type": "mobile",
       "accessible_sites": [
-        "yt",
-        "grok",
-        "tw",
+        "gpt",
         "claude",
         "fb"
       ]
     },
     {
-      "name": "🇰🇷 gpt fb claude tw yt grok tg S56_115",
+      "name": "🇰🇷 gpt claude fb grok yt tw tg S56_91",
+      "type": "http",
+      "country": "🇰🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "fb",
+        "grok",
+        "yt",
+        "tw",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇰🇷 claude grok gpt fb tw yt tg S44_92",
+      "type": "http",
+      "country": "🇰🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "grok",
+        "gpt",
+        "fb",
+        "tw",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇰🇷 gpt fb claude tw grok yt tg S56_93",
       "type": "http",
       "country": "🇰🇷",
       "speed_mbps": 0,
@@ -1816,50 +1532,30 @@
         "fb",
         "claude",
         "tw",
-        "yt",
         "grok",
+        "yt",
         "tg"
       ]
     },
     {
-      "name": "🇰🇷 claude gpt fb grok tw yt nf tg S58_116",
-      "type": "http",
+      "name": "🇰🇷 gpt claude fb yt grok tw S54_94",
+      "type": "socks5",
       "country": "🇰🇷",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 58,
+      "quality_score": 54,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
         "gpt",
+        "claude",
         "fb",
-        "grok",
-        "tw",
         "yt",
-        "nf",
-        "tg"
+        "grok",
+        "tw"
       ]
     },
     {
-      "name": "🇰🇷 gpt claude grok tw yt fb tg S44_117",
-      "type": "http",
-      "country": "🇰🇷",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "yt",
-        "fb",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇰🇷 gpt claude grok tw fb yt tg S56_118",
+      "name": "🇰🇷 gpt claude fb tw yt grok tg S56_95",
       "type": "socks5",
       "country": "🇰🇷",
       "speed_mbps": 0,
@@ -1869,15 +1565,45 @@
       "accessible_sites": [
         "gpt",
         "claude",
-        "grok",
+        "fb",
         "tw",
+        "yt",
+        "grok",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇰🇷 gpt claude tw grok fb yt tg S56_96",
+      "type": "socks5",
+      "country": "🇰🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tw",
+        "grok",
         "fb",
         "yt",
         "tg"
       ]
     },
     {
-      "name": "🇱🇹 claude gpt tg yt tw fb grok S56_119",
+      "name": "🇰🇷 tg S44_97",
+      "type": "socks5",
+      "country": "🇰🇷",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "tg"
+      ]
+    },
+    {
+      "name": "🇱🇹 claude gpt tg fb yt grok tw S56_98",
       "type": "http",
       "country": "🇱🇹",
       "speed_mbps": 0,
@@ -1888,14 +1614,51 @@
         "claude",
         "gpt",
         "tg",
-        "yt",
-        "tw",
         "fb",
+        "yt",
+        "grok",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇱🇻 tg gpt claude fb yt grok tw S56_99",
+      "type": "http",
+      "country": "🇱🇻",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "tg",
+        "gpt",
+        "claude",
+        "fb",
+        "yt",
+        "grok",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇱🇻 claude gpt tg nf fb tw yt grok S58_100",
+      "type": "http",
+      "country": "🇱🇻",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "tg",
+        "nf",
+        "fb",
+        "tw",
+        "yt",
         "grok"
       ]
     },
     {
-      "name": "🇱🇻 claude gpt tg nf fb grok yt tw S58_120",
+      "name": "🇱🇻 tg gpt nf fb claude tw yt grok S58_101",
       "type": "http",
       "country": "🇱🇻",
       "speed_mbps": 0,
@@ -1903,105 +1666,37 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
-        "gpt",
         "tg",
+        "gpt",
         "nf",
         "fb",
-        "grok",
-        "yt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇱🇻 claude tg gpt fb yt grok tw S56_121",
-      "type": "http",
-      "country": "🇱🇻",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "tg",
-        "gpt",
-        "fb",
-        "yt",
-        "grok",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇱🇻 claude gpt tg nf grok yt fb tw S58_122",
-      "type": "http",
-      "country": "🇱🇻",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 58,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tg",
-        "nf",
-        "grok",
-        "yt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇱🇻 claude gpt tg grok yt fb tw S56_123",
-      "type": "http",
-      "country": "🇱🇻",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tg",
-        "grok",
-        "yt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇲🇦 grok claude tw yt tg fb gpt S56_124",
-      "type": "http",
-      "country": "🇲🇦",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "grok",
         "claude",
         "tw",
         "yt",
-        "tg",
-        "fb",
-        "gpt"
+        "grok"
       ]
     },
     {
-      "name": "🇲🇲 grok claude yt S48_125",
+      "name": "🇱🇻 grok tw claude gpt fb yt tg nf S58_102",
       "type": "http",
-      "country": "🇲🇲",
+      "country": "🇱🇻",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 48,
+      "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
         "grok",
+        "tw",
         "claude",
-        "yt"
+        "gpt",
+        "fb",
+        "yt",
+        "tg",
+        "nf"
       ]
     },
     {
-      "name": "🇲🇽 grok fb yt tw tg S52_126",
+      "name": "🇲🇽 tw fb grok yt tg S52_103",
       "type": "http",
       "country": "🇲🇽",
       "speed_mbps": 0,
@@ -2009,123 +1704,69 @@
       "quality_score": 52,
       "ip_type": "residential",
       "accessible_sites": [
-        "grok",
-        "fb",
-        "yt",
         "tw",
+        "fb",
+        "grok",
+        "yt",
         "tg"
       ]
     },
     {
-      "name": "🇲🇽 gpt S44_127",
-      "type": "http",
-      "country": "🇲🇽",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇲🇽 tg S44_128",
-      "type": "http",
-      "country": "🇲🇽",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tg"
-      ]
-    },
-    {
-      "name": "🇲🇾 gpt grok claude fb yt tw tg S44_129",
+      "name": "🇲🇾 claude gpt grok tw fb yt nf tg S46_104",
       "type": "http",
       "country": "🇲🇾",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
+        "claude",
         "gpt",
         "grok",
-        "claude",
+        "tw",
         "fb",
         "yt",
-        "tw",
+        "nf",
         "tg"
       ]
     },
     {
-      "name": "🇳🇱 tg gpt claude yt fb grok tw S44_130",
+      "name": "🇳🇱 claude tg gpt nf fb tw grok yt S46_105",
       "type": "http",
       "country": "🇳🇱",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
+        "claude",
         "tg",
         "gpt",
-        "claude",
-        "yt",
-        "fb",
-        "grok",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇳🇱 claude gpt tw grok S38_131",
-      "type": "http",
-      "country": "🇳🇱",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 38,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tw",
-        "grok"
-      ]
-    },
-    {
-      "name": "🇳🇱 claude gpt fb tg grok nf tw S44_132",
-      "type": "http",
-      "country": "🇳🇱",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "fb",
-        "tg",
-        "grok",
         "nf",
-        "tw"
+        "fb",
+        "tw",
+        "grok",
+        "yt"
       ]
     },
     {
-      "name": "🇳🇱 claude grok yt nf S38_133",
+      "name": "🇳🇱 gpt grok tw claude nf S40_106",
       "type": "http",
       "country": "🇳🇱",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 38,
+      "quality_score": 40,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
+        "gpt",
         "grok",
-        "yt",
+        "tw",
+        "claude",
         "nf"
       ]
     },
     {
-      "name": "🇳🇱 gpt tg claude fb grok yt tw S56_134",
+      "name": "🇳🇱 claude gpt tg fb yt tw grok S56_107",
       "type": "http",
       "country": "🇳🇱",
       "speed_mbps": 0,
@@ -2133,50 +1774,56 @@
       "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
+        "claude",
         "gpt",
         "tg",
-        "claude",
         "fb",
-        "grok",
         "yt",
-        "tw"
+        "tw",
+        "grok"
       ]
     },
     {
-      "name": "🇳🇱 grok yt fb gpt claude S40_135",
+      "name": "🇳🇱 claude grok S46_108",
       "type": "socks5",
       "country": "🇳🇱",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 40,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "grok",
-        "yt",
-        "fb",
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇳🇱 claude tg yt grok tw fb S54_136",
-      "type": "socks5",
-      "country": "🇳🇱",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 54,
+      "quality_score": 46,
       "ip_type": "residential",
       "accessible_sites": [
         "claude",
-        "tg",
-        "yt",
-        "grok",
-        "tw",
-        "fb"
+        "grok"
       ]
     },
     {
-      "name": "🇵🇭 claude S44_137",
+      "name": "🇳🇱 claude grok yt S36_109",
+      "type": "socks5",
+      "country": "🇳🇱",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "grok",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇵🇭 grok S41_110",
+      "type": "http",
+      "country": "🇵🇭",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 41,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "grok"
+      ]
+    },
+    {
+      "name": "🇵🇭 fb S44_111",
       "type": "http",
       "country": "🇵🇭",
       "speed_mbps": 0,
@@ -2184,25 +1831,40 @@
       "quality_score": 44,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude"
+        "fb"
       ]
     },
     {
-      "name": "🇵🇰 fb yt S46_138",
-      "type": "socks5",
-      "country": "🇵🇰",
+      "name": "🇵🇭 tw tg grok S48_112",
+      "type": "http",
+      "country": "🇵🇭",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 48,
       "ip_type": "residential",
       "accessible_sites": [
-        "fb",
-        "yt"
+        "tw",
+        "tg",
+        "grok"
       ]
     },
     {
-      "name": "🇵🇰 yt S44_139",
+      "name": "🇵🇭 claude tw fb S36_113",
       "type": "socks5",
+      "country": "🇵🇭",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "tw",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇵🇰 yt S44_114",
+      "type": "http",
       "country": "🇵🇰",
       "speed_mbps": 0,
       "delay_ms": 1000,
@@ -2213,7 +1875,57 @@
       ]
     },
     {
-      "name": "🇵🇰 yt grok S46_140",
+      "name": "🇵🇰 grok S44_115",
+      "type": "http",
+      "country": "🇵🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "grok"
+      ]
+    },
+    {
+      "name": "🇵🇰 yt claude fb S48_116",
+      "type": "socks5",
+      "country": "🇵🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 48,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "yt",
+        "claude",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇵🇰 gpt S44_117",
+      "type": "socks5",
+      "country": "🇵🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇵🇰 gpt S44_118",
+      "type": "socks5",
+      "country": "🇵🇰",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇵🇰 yt fb S46_119",
       "type": "socks5",
       "country": "🇵🇰",
       "speed_mbps": 0,
@@ -2222,39 +1934,63 @@
       "ip_type": "residential",
       "accessible_sites": [
         "yt",
-        "grok"
+        "fb"
       ]
     },
     {
-      "name": "🇵🇰 tw yt S46_141",
+      "name": "🇵🇰 yt claude grok S48_120",
       "type": "socks5",
       "country": "🇵🇰",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 48,
       "ip_type": "residential",
       "accessible_sites": [
-        "tw",
-        "yt"
+        "yt",
+        "claude",
+        "grok"
       ]
     },
     {
-      "name": "🇵🇱 claude fb tg tw S50_142",
-      "type": "socks5",
-      "country": "🇵🇱",
+      "name": "🇷🇴 gpt claude nf tg grok fb yt tw S58_121",
+      "type": "http",
+      "country": "🇷🇴",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 50,
+      "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
+        "gpt",
         "claude",
-        "fb",
+        "nf",
         "tg",
+        "grok",
+        "fb",
+        "yt",
         "tw"
       ]
     },
     {
-      "name": "🇷🇺 gpt claude grok S48_143",
+      "name": "🇷🇴 tg gpt claude nf grok fb yt tw S55_122",
+      "type": "http",
+      "country": "🇷🇴",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 55,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "tg",
+        "gpt",
+        "claude",
+        "nf",
+        "grok",
+        "fb",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇷🇺 grok gpt nf S48_123",
       "type": "http",
       "country": "🇷🇺",
       "speed_mbps": 0,
@@ -2262,13 +1998,68 @@
       "quality_score": 48,
       "ip_type": "residential",
       "accessible_sites": [
+        "grok",
+        "gpt",
+        "nf"
+      ]
+    },
+    {
+      "name": "🇷🇺 gpt S44_124",
+      "type": "http",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇷🇺 gpt claude grok yt tw S40_125",
+      "type": "http",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 40,
+      "ip_type": "datacenter",
+      "accessible_sites": [
         "gpt",
         "claude",
+        "grok",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇷🇺 gpt grok S46_126",
+      "type": "http",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 46,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt",
         "grok"
       ]
     },
     {
-      "name": "🇷🇺 claude gpt grok nf yt fb tw S44_144",
+      "name": "🇷🇺 grok gpt tw S48_127",
+      "type": "http",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 48,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇷🇺 yt grok gpt tw fb claude tg S44_128",
       "type": "http",
       "country": "🇷🇺",
       "speed_mbps": 0,
@@ -2276,78 +2067,56 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
-        "gpt",
-        "grok",
-        "nf",
         "yt",
+        "grok",
+        "gpt",
+        "tw",
         "fb",
-        "tw"
+        "claude",
+        "tg"
       ]
     },
     {
-      "name": "🇷🇺 nf yt S34_145",
+      "name": "🇷🇺 grok gpt nf S48_129",
       "type": "http",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 48,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "nf"
+      ]
+    },
+    {
+      "name": "🇷🇺 gpt S44_130",
+      "type": "socks5",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇷🇺 grok gpt S34_131",
+      "type": "socks5",
       "country": "🇷🇺",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 34,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "nf",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇷🇺 claude gpt grok nf tw S52_146",
-      "type": "http",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 52,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
         "grok",
-        "nf",
-        "tw"
+        "gpt"
       ]
     },
     {
-      "name": "🇷🇺 claude tg gpt fb grok tw yt S44_147",
-      "type": "http",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "tg",
-        "gpt",
-        "fb",
-        "grok",
-        "tw",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇷🇺 gpt claude grok S48_148",
-      "type": "http",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok"
-      ]
-    },
-    {
-      "name": "🇷🇺 gpt S44_149",
+      "name": "🇷🇺 gpt S44_132",
       "type": "socks5",
       "country": "🇷🇺",
       "speed_mbps": 0,
@@ -2359,43 +2128,7 @@
       ]
     },
     {
-      "name": "🇷🇺 gpt S44_150",
-      "type": "socks5",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇷🇺 gpt S44_151",
-      "type": "socks5",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇷🇺 claude S44_152",
-      "type": "socks5",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇷🇺 tg yt gpt claude tw fb grok S56_153",
+      "name": "🇷🇺 tg yt fb tw gpt grok claude S56_133",
       "type": "socks5",
       "country": "🇷🇺",
       "speed_mbps": 0,
@@ -2405,45 +2138,43 @@
       "accessible_sites": [
         "tg",
         "yt",
-        "gpt",
-        "claude",
-        "tw",
         "fb",
+        "tw",
+        "gpt",
+        "grok",
+        "claude"
+      ]
+    },
+    {
+      "name": "🇷🇺 tg yt nf fb gpt S52_134",
+      "type": "socks5",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 52,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "tg",
+        "yt",
+        "nf",
+        "fb",
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇷🇺 grok S44_135",
+      "type": "socks5",
+      "country": "🇷🇺",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
         "grok"
       ]
     },
     {
-      "name": "🇷🇺 grok nf S46_154",
-      "type": "socks5",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "grok",
-        "nf"
-      ]
-    },
-    {
-      "name": "🇷🇺 gpt tw tg claude grok fb S54_155",
-      "type": "socks5",
-      "country": "🇷🇺",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 54,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "tw",
-        "tg",
-        "claude",
-        "grok",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇸🇨 claude gpt grok tw yt tg fb S44_156",
+      "name": "🇸🇨 gpt claude tw grok fb yt tg S44_136",
       "type": "http",
       "country": "🇸🇨",
       "speed_mbps": 0,
@@ -2451,72 +2182,53 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
         "gpt",
-        "grok",
-        "tw",
-        "yt",
-        "tg",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇸🇨 claude gpt grok tw fb yt tg S44_157",
-      "type": "http",
-      "country": "🇸🇨",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
         "claude",
-        "gpt",
-        "grok",
         "tw",
+        "grok",
         "fb",
         "yt",
         "tg"
       ]
     },
     {
-      "name": "🇸🇪 claude gpt tg yt grok nf fb tw S46_158",
+      "name": "🇸🇨 gpt claude tw grok fb yt tg S44_137",
+      "type": "http",
+      "country": "🇸🇨",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "tw",
+        "grok",
+        "fb",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇸🇪 claude gpt grok tg yt fb tw S44_138",
       "type": "http",
       "country": "🇸🇪",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
         "claude",
         "gpt",
+        "grok",
         "tg",
         "yt",
-        "grok",
-        "nf",
         "fb",
         "tw"
       ]
     },
     {
-      "name": "🇸🇬 gpt claude grok yt fb tw tg S44_159",
-      "type": "trojan",
-      "country": "🇸🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "yt",
-        "fb",
-        "tw",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇸🇬 gpt claude grok yt tw fb nf tg S46_160",
+      "name": "🇸🇬 gpt grok claude nf tg yt tw fb S46_139",
       "type": "http",
       "country": "🇸🇬",
       "speed_mbps": 0,
@@ -2525,17 +2237,17 @@
       "ip_type": "datacenter",
       "accessible_sites": [
         "gpt",
-        "claude",
         "grok",
-        "yt",
-        "tw",
-        "fb",
+        "claude",
         "nf",
-        "tg"
+        "tg",
+        "yt",
+        "tw",
+        "fb"
       ]
     },
     {
-      "name": "🇸🇬 claude grok gpt yt tw fb tg nf S46_161",
+      "name": "🇸🇬 grok gpt claude tw fb yt tg nf S46_140",
       "type": "http",
       "country": "🇸🇬",
       "speed_mbps": 0,
@@ -2543,18 +2255,30 @@
       "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude",
         "grok",
         "gpt",
-        "yt",
+        "claude",
         "tw",
         "fb",
+        "yt",
         "tg",
         "nf"
       ]
     },
     {
-      "name": "🇸🇬 grok claude gpt yt fb tw tg S44_162",
+      "name": "🇸🇬 tg S32_141",
+      "type": "http",
+      "country": "🇸🇬",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tg"
+      ]
+    },
+    {
+      "name": "🇸🇬 gpt grok claude yt tw fb tg S44_142",
       "type": "http",
       "country": "🇸🇬",
       "speed_mbps": 0,
@@ -2562,18 +2286,80 @@
       "quality_score": 44,
       "ip_type": "datacenter",
       "accessible_sites": [
+        "gpt",
         "grok",
         "claude",
-        "gpt",
         "yt",
-        "fb",
         "tw",
+        "fb",
         "tg"
       ]
     },
     {
-      "name": "🇸🇬 claude gpt grok fb yt nf tg tw S46_163",
+      "name": "🇸🇬 gpt grok claude fb tw yt tg S44_143",
       "type": "http",
+      "country": "🇸🇬",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "grok",
+        "claude",
+        "fb",
+        "tw",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇸🇬 gpt claude grok yt tw fb tg S44_144",
+      "type": "http",
+      "country": "🇸🇬",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "grok",
+        "yt",
+        "tw",
+        "fb",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇸🇬 grok S32_145",
+      "type": "socks5",
+      "country": "🇸🇬",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok"
+      ]
+    },
+    {
+      "name": "🇸🇬 tw fb yt S36_146",
+      "type": "socks5",
+      "country": "🇸🇬",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 36,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tw",
+        "fb",
+        "yt"
+      ]
+    },
+    {
+      "name": "🇸🇬 claude gpt grok yt fb tw nf tg S46_147",
+      "type": "socks5",
       "country": "🇸🇬",
       "speed_mbps": 0,
       "delay_ms": 1000,
@@ -2583,87 +2369,15 @@
         "claude",
         "gpt",
         "grok",
-        "fb",
         "yt",
+        "fb",
+        "tw",
         "nf",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇸🇬 gpt grok claude yt tw fb tg S44_164",
-      "type": "http",
-      "country": "🇸🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "grok",
-        "claude",
-        "yt",
-        "tw",
-        "fb",
         "tg"
       ]
     },
     {
-      "name": "🇸🇬 gpt yt claude fb tw tg grok S44_165",
-      "type": "http",
-      "country": "🇸🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "yt",
-        "claude",
-        "fb",
-        "tw",
-        "tg",
-        "grok"
-      ]
-    },
-    {
-      "name": "🇸🇬 claude gpt grok yt fb tw tg S44_166",
-      "type": "http",
-      "country": "🇸🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "grok",
-        "yt",
-        "fb",
-        "tw",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇸🇬 claude grok gpt yt tw fb tg S44_167",
-      "type": "socks5",
-      "country": "🇸🇬",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "grok",
-        "gpt",
-        "yt",
-        "tw",
-        "fb",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇸🇰 gpt claude tg fb yt tw grok S56_168",
+      "name": "🇸🇰 gpt tg grok fb tw yt claude S56_148",
       "type": "http",
       "country": "🇸🇰",
       "speed_mbps": 0,
@@ -2672,28 +2386,16 @@
       "ip_type": "residential",
       "accessible_sites": [
         "gpt",
-        "claude",
         "tg",
+        "grok",
         "fb",
-        "yt",
         "tw",
-        "grok"
+        "yt",
+        "claude"
       ]
     },
     {
-      "name": "🇹🇭 grok S44_169",
-      "type": "http",
-      "country": "🇹🇭",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "grok"
-      ]
-    },
-    {
-      "name": "🇹🇭 claude S44_170",
+      "name": "🇹🇭 claude S44_149",
       "type": "http",
       "country": "🇹🇭",
       "speed_mbps": 0,
@@ -2705,31 +2407,7 @@
       ]
     },
     {
-      "name": "🇹🇭 claude S44_171",
-      "type": "http",
-      "country": "🇹🇭",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇹🇭 tg S44_172",
-      "type": "http",
-      "country": "🇹🇭",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tg"
-      ]
-    },
-    {
-      "name": "🇹🇹 gpt claude grok fb nf yt tg tw S58_173",
+      "name": "🇹🇹 claude gpt grok fb nf yt tg tw S58_150",
       "type": "http",
       "country": "🇹🇹",
       "speed_mbps": 0,
@@ -2737,6 +2415,25 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
+        "claude",
+        "gpt",
+        "grok",
+        "fb",
+        "nf",
+        "yt",
+        "tg",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇺🇸 gpt claude grok fb nf yt tg tw S58_151",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
         "gpt",
         "claude",
         "grok",
@@ -2748,20 +2445,79 @@
       ]
     },
     {
-      "name": "🇺🇦 fb grok S46_174",
-      "type": "socks5",
-      "country": "🇺🇦",
+      "name": "🇺🇸 tg S32_152",
+      "type": "http",
+      "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 46,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 claude gpt grok fb tg yt tw S44_153",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "grok",
+        "fb",
+        "tg",
+        "yt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇺🇸 gpt grok claude fb yt tg tw S56_154",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
+        "gpt",
+        "grok",
+        "claude",
         "fb",
+        "yt",
+        "tg",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇺🇸 fb S32_155",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "fb"
+      ]
+    },
+    {
+      "name": "🇺🇸 grok S32_156",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 32,
+      "ip_type": "datacenter",
+      "accessible_sites": [
         "grok"
       ]
     },
     {
-      "name": "🇺🇸 fb tw grok tg yt gpt S42_175",
+      "name": "🇺🇸 claude gpt grok fb tg yt S42_157",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -2769,52 +2525,16 @@
       "quality_score": 42,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "fb",
-        "tw",
+        "claude",
+        "gpt",
         "grok",
+        "fb",
         "tg",
-        "yt",
-        "gpt"
+        "yt"
       ]
     },
     {
-      "name": "🇺🇸 gpt grok claude fb yt tw tg S44_176",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "grok",
-        "claude",
-        "fb",
-        "yt",
-        "tw",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 fb gpt grok tw claude yt tg S44_177",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "fb",
-        "gpt",
-        "grok",
-        "tw",
-        "claude",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 yt grok S34_178",
+      "name": "🇺🇸 grok nf S34_158",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -2822,30 +2542,29 @@
       "quality_score": 34,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "yt",
-        "grok"
+        "grok",
+        "nf"
       ]
     },
     {
-      "name": "🇺🇸 gpt yt fb claude grok tg tw S44_179",
+      "name": "🇺🇸 grok tw fb claude yt tg S54_159",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
+      "quality_score": 54,
+      "ip_type": "residential",
       "accessible_sites": [
-        "gpt",
-        "yt",
+        "grok",
+        "tw",
         "fb",
         "claude",
-        "grok",
-        "tg",
-        "tw"
+        "yt",
+        "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt grok claude nf fb tw yt tg S46_180",
+      "name": "🇺🇸 claude grok gpt tw nf fb yt tg S46_160",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -2853,173 +2572,18 @@
       "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt",
-        "grok",
         "claude",
+        "grok",
+        "gpt",
+        "tw",
         "nf",
         "fb",
-        "tw",
         "yt",
         "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt claude grok tw fb yt tg S44_181",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "fb",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude fb gpt grok tw yt tg S44_182",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "fb",
-        "gpt",
-        "grok",
-        "tw",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude gpt fb tw grok yt tg S56_183",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "fb",
-        "tw",
-        "grok",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt claude grok tw fb yt tg S44_184",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "fb",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt claude grok tw fb nf yt tg S46_185",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "tw",
-        "fb",
-        "nf",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt fb tw claude grok yt tg S53_186",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "gpt",
-        "fb",
-        "tw",
-        "claude",
-        "grok",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude gpt tw grok fb yt tg S56_187",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tw",
-        "grok",
-        "fb",
-        "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 fb S44_188",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude gpt tw grok yt S49_189",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 49,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "claude",
-        "gpt",
-        "tw",
-        "grok",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt fb yt S36_190",
+      "name": "🇺🇸 claude nf fb S36_161",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -3027,105 +2591,32 @@
       "quality_score": 36,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt",
-        "fb",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude fb tw tg yt S40_191",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 40,
-      "ip_type": "datacenter",
-      "accessible_sites": [
         "claude",
-        "fb",
-        "tw",
-        "tg",
-        "yt"
+        "nf",
+        "fb"
       ]
     },
     {
-      "name": "🇺🇸 tw fb gpt tg yt S40_192",
+      "name": "🇺🇸 gpt nf claude grok fb yt tg tw S55_162",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 40,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "tw",
-        "fb",
-        "gpt",
-        "tg",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt S32_193",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt tw fb claude grok yt tg S53_194",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
+      "quality_score": 55,
       "ip_type": "mobile",
       "accessible_sites": [
         "gpt",
-        "tw",
-        "fb",
+        "nf",
         "claude",
         "grok",
+        "fb",
         "yt",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude S32_195",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude"
-      ]
-    },
-    {
-      "name": "🇺🇸 grok fb claude gpt tg yt tw S53_196",
-      "type": "http",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 53,
-      "ip_type": "mobile",
-      "accessible_sites": [
-        "grok",
-        "fb",
-        "claude",
-        "gpt",
         "tg",
-        "yt",
         "tw"
       ]
     },
     {
-      "name": "🇺🇸 claude gpt grok fb tw yt tg S44_197",
+      "name": "🇺🇸 claude gpt grok tw fb yt tg S44_163",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -3136,27 +2627,135 @@
         "claude",
         "gpt",
         "grok",
-        "fb",
         "tw",
+        "fb",
         "yt",
         "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt yt S46_198",
+      "name": "🇺🇸 gpt claude fb tw grok yt tg S53_164",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 53,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "gpt",
+        "claude",
+        "fb",
+        "tw",
+        "grok",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 yt S44_165",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "yt"
+      ]
+    },
+    {
+      "name": "🇺🇸 claude gpt fb tw grok yt tg S56_166",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "fb",
+        "tw",
+        "grok",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 gpt grok claude fb yt tw tg S53_167",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 53,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "gpt",
+        "grok",
+        "claude",
+        "fb",
+        "yt",
+        "tw",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 grok gpt claude tg tw yt fb S44_168",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 44,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "claude",
+        "tg",
+        "tw",
+        "yt",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇺🇸 claude gpt grok yt tw tg fb S56_169",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "grok",
+        "yt",
+        "tw",
+        "tg",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇺🇸 claude gpt grok tw fb nf tg yt S46_170",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 46,
-      "ip_type": "residential",
+      "ip_type": "datacenter",
       "accessible_sites": [
+        "claude",
         "gpt",
+        "grok",
+        "tw",
+        "fb",
+        "nf",
+        "tg",
         "yt"
       ]
     },
     {
-      "name": "🇺🇸 tw gpt claude fb grok yt tg S53_199",
+      "name": "🇺🇸 tw claude gpt fb yt grok tg S53_171",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -3165,34 +2764,30 @@
       "ip_type": "mobile",
       "accessible_sites": [
         "tw",
-        "gpt",
         "claude",
+        "gpt",
         "fb",
-        "grok",
         "yt",
+        "grok",
         "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt claude grok fb yt tg tw S44_200",
+      "name": "🇺🇸 nf fb tg S45_172",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
+      "quality_score": 45,
+      "ip_type": "mobile",
       "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
+        "nf",
         "fb",
-        "yt",
-        "tg",
-        "tw"
+        "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt claude grok nf fb tw tg yt S58_201",
+      "name": "🇺🇸 gpt claude nf grok tw fb yt tg S58_173",
       "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -3202,42 +2797,134 @@
       "accessible_sites": [
         "gpt",
         "claude",
-        "grok",
         "nf",
-        "fb",
+        "grok",
         "tw",
-        "tg",
-        "yt"
+        "fb",
+        "yt",
+        "tg"
       ]
     },
     {
-      "name": "🇺🇸 claude S32_202",
-      "type": "socks5",
+      "name": "🇺🇸 grok yt tw gpt tg nf claude fb S55_174",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 55,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "grok",
+        "yt",
+        "tw",
+        "gpt",
+        "tg",
+        "nf",
+        "claude",
+        "fb"
+      ]
+    },
+    {
+      "name": "🇺🇸 claude gpt nf grok tw fb yt tg S58_175",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "gpt",
+        "nf",
+        "grok",
+        "tw",
+        "fb",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 grok gpt claude fb nf yt tg tw S46_176",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 46,
+      "ip_type": "datacenter",
+      "accessible_sites": [
+        "grok",
+        "gpt",
+        "claude",
+        "fb",
+        "nf",
+        "yt",
+        "tg",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇺🇸 gpt yt claude fb tw grok tg S53_177",
+      "type": "http",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 53,
+      "ip_type": "mobile",
+      "accessible_sites": [
+        "gpt",
+        "yt",
+        "claude",
+        "fb",
+        "tw",
+        "grok",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 fb S32_178",
+      "type": "http",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 32,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "claude"
+        "fb"
       ]
     },
     {
-      "name": "🇺🇸 claude gpt fb S48_203",
+      "name": "🇺🇸 claude grok fb tw gpt yt tg S44_179",
       "type": "socks5",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
+      "quality_score": 44,
+      "ip_type": "datacenter",
       "accessible_sites": [
         "claude",
+        "grok",
+        "fb",
+        "tw",
+        "gpt",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇺🇸 gpt fb S46_180",
+      "type": "socks5",
+      "country": "🇺🇸",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 46,
+      "ip_type": "residential",
+      "accessible_sites": [
         "gpt",
         "fb"
       ]
     },
     {
-      "name": "🇺🇸 gpt fb tw S36_204",
+      "name": "🇺🇸 yt fb tg S36_181",
       "type": "socks5",
       "country": "🇺🇸",
       "speed_mbps": 0,
@@ -3245,389 +2932,94 @@
       "quality_score": 36,
       "ip_type": "datacenter",
       "accessible_sites": [
-        "gpt",
-        "fb",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇺🇸 yt grok tw S48_205",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
-      "accessible_sites": [
         "yt",
-        "grok",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇺🇸 grok fb tg claude S38_206",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 38,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "grok",
         "fb",
-        "tg",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇺🇸 gpt claude grok nf fb yt tg tw S46_207",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "grok",
-        "nf",
-        "fb",
-        "yt",
-        "tg",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇺🇸 nf yt tg S36_208",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 36,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "nf",
-        "yt",
         "tg"
       ]
     },
     {
-      "name": "🇺🇸 gpt S32_209",
+      "name": "🇺🇸 claude yt gpt tw fb S40_182",
       "type": "socks5",
       "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 32,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude gpt fb yt tw grok tg S44_210",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 40,
       "ip_type": "datacenter",
       "accessible_sites": [
         "claude",
-        "gpt",
-        "fb",
         "yt",
+        "gpt",
         "tw",
-        "grok",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇺🇸 claude tg fb gpt grok yt tw S44_211",
-      "type": "socks5",
-      "country": "🇺🇸",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "tg",
-        "fb",
-        "gpt",
-        "grok",
-        "yt",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇺🇿 claude fb tw yt gpt tg grok S44_212",
-      "type": "http",
-      "country": "🇺🇿",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "datacenter",
-      "accessible_sites": [
-        "claude",
-        "fb",
-        "tw",
-        "yt",
-        "gpt",
-        "tg",
-        "grok"
-      ]
-    },
-    {
-      "name": "🇻🇪 grok yt S46_213",
-      "type": "http",
-      "country": "🇻🇪",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "grok",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇻🇳 fb S44_214",
-      "type": "http",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
         "fb"
       ]
     },
     {
-      "name": "🇻🇳 gpt claude tw grok fb tg nf S56_215",
-      "type": "http",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude",
-        "tw",
-        "grok",
-        "fb",
-        "tg",
-        "nf"
-      ]
-    },
-    {
-      "name": "🇻🇳 gpt fb tg yt claude grok tw S56_216",
-      "type": "http",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 56,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "fb",
-        "tg",
-        "yt",
-        "claude",
-        "grok",
-        "tw"
-      ]
-    },
-    {
-      "name": "🇻🇳 claude tg gpt fb S50_217",
+      "name": "🇺🇸 tg grok fb gpt tw S52_183",
       "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 50,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "tg",
-        "gpt",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇻🇳 tw S44_218",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tw"
-      ]
-    },
-    {
-      "name": "🇻🇳 tg S44_219",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tg"
-      ]
-    },
-    {
-      "name": "🇻🇳 tw yt S46_220",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tw",
-        "yt"
-      ]
-    },
-    {
-      "name": "🇻🇳 fb S44_221",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "fb"
-      ]
-    },
-    {
-      "name": "🇻🇳 claude yt grok gpt S50_222",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 50,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "yt",
-        "grok",
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇻🇳 gpt claude S46_223",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "name": "🇻🇳 claude fb tw tg S50_224",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 50,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "claude",
-        "fb",
-        "tw",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇻🇳 gpt yt claude grok tg S52_225",
-      "type": "socks5",
-      "country": "🇻🇳",
+      "country": "🇺🇸",
       "speed_mbps": 0,
       "delay_ms": 1000,
       "quality_score": 52,
       "ip_type": "residential",
       "accessible_sites": [
+        "tg",
+        "grok",
+        "fb",
+        "gpt",
+        "tw"
+      ]
+    },
+    {
+      "name": "🇻🇳 claude gpt yt fb tw grok tg S56_184",
+      "type": "http",
+      "country": "🇻🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
         "gpt",
         "yt",
-        "claude",
+        "fb",
+        "tw",
         "grok",
         "tg"
       ]
     },
     {
-      "name": "🇻🇳 tw claude tg S48_226",
-      "type": "socks5",
+      "name": "🇻🇳 claude gpt yt fb grok tw tg S56_185",
+      "type": "http",
       "country": "🇻🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 48,
+      "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
-        "tw",
         "claude",
-        "tg"
-      ]
-    },
-    {
-      "name": "🇻🇳 yt fb gpt S48_227",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 48,
-      "ip_type": "residential",
-      "accessible_sites": [
+        "gpt",
         "yt",
         "fb",
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇻🇳 tg S44_228",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
+        "grok",
+        "tw",
         "tg"
       ]
     },
     {
-      "name": "🇻🇳 yt S44_229",
+      "name": "🇻🇳 grok tw S46_186",
       "type": "socks5",
       "country": "🇻🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 46,
       "ip_type": "residential",
       "accessible_sites": [
-        "yt"
+        "grok",
+        "tw"
       ]
     },
     {
-      "name": "🇻🇳 gpt S44_230",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 44,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇻🇳 tw yt grok gpt claude tg fb nf S58_231",
+      "name": "🇻🇳 gpt claude nf fb grok yt tw tg S58_187",
       "type": "socks5",
       "country": "🇻🇳",
       "speed_mbps": 0,
@@ -3635,73 +3027,92 @@
       "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "tw",
-        "yt",
-        "grok",
         "gpt",
         "claude",
-        "tg",
-        "fb",
-        "nf"
-      ]
-    },
-    {
-      "name": "🇻🇳 tg fb nf gpt S50_232",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 50,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "tg",
-        "fb",
         "nf",
-        "gpt"
-      ]
-    },
-    {
-      "name": "🇻🇳 gpt tg S46_233",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "gpt",
+        "fb",
+        "grok",
+        "yt",
+        "tw",
         "tg"
       ]
     },
     {
-      "name": "🇻🇳 yt S44_234",
+      "name": "🇻🇳 claude gpt fb yt grok tw nf tg S58_188",
       "type": "socks5",
       "country": "🇻🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 44,
+      "quality_score": 58,
       "ip_type": "residential",
       "accessible_sites": [
-        "yt"
+        "claude",
+        "gpt",
+        "fb",
+        "yt",
+        "grok",
+        "tw",
+        "nf",
+        "tg"
       ]
     },
     {
-      "name": "🇻🇳 gpt tg claude fb S50_235",
+      "name": "🇻🇳 gpt yt fb grok tw tg claude S56_189",
       "type": "socks5",
       "country": "🇻🇳",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 50,
+      "quality_score": 56,
       "ip_type": "residential",
       "accessible_sites": [
         "gpt",
+        "yt",
+        "fb",
+        "grok",
+        "tw",
         "tg",
-        "claude",
-        "fb"
+        "claude"
       ]
     },
     {
-      "name": "🇻🇳 claude grok yt S48_236",
+      "name": "🇻🇳 tw gpt fb claude grok yt tg S56_190",
+      "type": "socks5",
+      "country": "🇻🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 56,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "tw",
+        "gpt",
+        "fb",
+        "claude",
+        "grok",
+        "yt",
+        "tg"
+      ]
+    },
+    {
+      "name": "🇻🇳 claude yt grok fb nf tw tg gpt S58_191",
+      "type": "socks5",
+      "country": "🇻🇳",
+      "speed_mbps": 0,
+      "delay_ms": 1000,
+      "quality_score": 58,
+      "ip_type": "residential",
+      "accessible_sites": [
+        "claude",
+        "yt",
+        "grok",
+        "fb",
+        "nf",
+        "tw",
+        "tg",
+        "gpt"
+      ]
+    },
+    {
+      "name": "🇻🇳 tg tw gpt S48_192",
       "type": "socks5",
       "country": "🇻🇳",
       "speed_mbps": 0,
@@ -3709,102 +3120,89 @@
       "quality_score": 48,
       "ip_type": "residential",
       "accessible_sites": [
-        "claude",
-        "grok",
-        "yt"
+        "tg",
+        "tw",
+        "gpt"
       ]
     },
     {
-      "name": "🇻🇳 yt fb S46_237",
-      "type": "socks5",
-      "country": "🇻🇳",
-      "speed_mbps": 0,
-      "delay_ms": 1000,
-      "quality_score": 46,
-      "ip_type": "residential",
-      "accessible_sites": [
-        "yt",
-        "fb"
-      ]
-    },
-    {
-      "name": "🇿🇦 claude gpt grok tw fb yt S42_238",
+      "name": "🇿🇦 claude gpt tg grok nf fb tw yt S46_193",
       "type": "http",
       "country": "🇿🇦",
       "speed_mbps": 0,
       "delay_ms": 1000,
-      "quality_score": 42,
+      "quality_score": 46,
       "ip_type": "datacenter",
       "accessible_sites": [
         "claude",
         "gpt",
+        "tg",
         "grok",
-        "tw",
+        "nf",
         "fb",
+        "tw",
         "yt"
       ]
     }
   ],
   "summary": {
     "country_distribution": {
-      "": 3,
+      "": 5,
       "🇦🇷": 1,
-      "🇧🇩": 4,
+      "🇦🇺": 1,
+      "🇧🇪": 1,
       "🇧🇷": 2,
       "🇧🇼": 1,
-      "🇨🇦": 4,
+      "🇨🇦": 2,
       "🇨🇬": 1,
-      "🇨🇲": 12,
-      "🇨🇳": 24,
-      "🇨🇿": 1,
-      "🇩🇪": 7,
-      "🇪🇨": 2,
+      "🇨🇱": 1,
+      "🇨🇲": 5,
+      "🇨🇳": 10,
+      "🇨🇴": 1,
+      "🇩🇪": 8,
+      "🇩🇴": 1,
       "🇪🇬": 1,
-      "🇪🇸": 2,
+      "🇪🇸": 1,
       "🇫🇮": 3,
       "🇫🇷": 10,
       "🇬🇧": 2,
       "🇭🇰": 8,
-      "🇭🇺": 1,
       "🇮🇩": 3,
-      "🇮🇳": 9,
-      "🇮🇶": 1,
+      "🇮🇱": 1,
+      "🇮🇳": 4,
+      "🇮🇶": 2,
       "🇮🇷": 1,
-      "🇮🇹": 4,
-      "🇯🇵": 6,
+      "🇮🇹": 8,
+      "🇯🇵": 4,
+      "🇰🇬": 1,
       "🇰🇭": 1,
-      "🇰🇷": 4,
+      "🇰🇷": 7,
       "🇱🇹": 1,
       "🇱🇻": 4,
-      "🇲🇦": 1,
-      "🇲🇲": 1,
-      "🇲🇽": 3,
+      "🇲🇽": 1,
       "🇲🇾": 1,
-      "🇳🇱": 7,
-      "🇵🇭": 1,
-      "🇵🇰": 4,
-      "🇵🇱": 1,
+      "🇳🇱": 5,
+      "🇵🇭": 4,
+      "🇵🇰": 7,
+      "🇷🇴": 2,
       "🇷🇺": 13,
       "🇸🇨": 2,
       "🇸🇪": 1,
       "🇸🇬": 9,
       "🇸🇰": 1,
-      "🇹🇭": 4,
+      "🇹🇭": 1,
       "🇹🇹": 1,
-      "🇺🇦": 1,
-      "🇺🇸": 37,
-      "🇺🇿": 1,
-      "🇻🇪": 1,
-      "🇻🇳": 24,
+      "🇺🇸": 33,
+      "🇻🇳": 9,
       "🇿🇦": 1
     },
     "protocol_distribution": {
-      "http": 165,
-      "socks5": 66,
-      "ss": 2,
-      "trojan": 4,
-      "vmess": 1
+      "http": 138,
+      "socks5": 49,
+      "ss": 1,
+      "trojan": 2,
+      "vmess": 3
     },
-    "total_nodes": 238
+    "total_nodes": 193
   }
 }
